@@ -1,0 +1,1063 @@
+{
+  "meta": {
+    "dateRange": "01/04/2026 → 30/04/2026 · Dữ liệu hóa đơn chi tiết",
+    "badgeLabel": "THÁNG 4 · 2026",
+    "totalBills": 1252,
+    "numDays": 30,
+    "updatedAt": ""
+  },
+  "kpis": [
+    {
+      "label": "Tổng doanh thu",
+      "value": "953.9M",
+      "sub": "953,904,000 đ",
+      "delta": "↓ 5.6% vs T3",
+      "deltaType": "down",
+      "color": "amber"
+    },
+    {
+      "label": "Số hóa đơn",
+      "value": "1,252",
+      "sub": "~41.7 bills/ngày",
+      "delta": "↓ 81 bills vs T3",
+      "deltaType": "down",
+      "color": "teal"
+    },
+    {
+      "label": "Avg bill",
+      "value": "762K",
+      "sub": "trung bình/bàn",
+      "delta": "↑ 5K vs T3 (757K)",
+      "deltaType": "up",
+      "color": "rose"
+    },
+    {
+      "label": "Lượt khách",
+      "value": "2,909",
+      "sub": "TB 2.32 khách/bàn",
+      "delta": "↓ 195 vs T3",
+      "deltaType": "down",
+      "color": "blue"
+    },
+    {
+      "label": "Chi tiêu / khách",
+      "value": "328K",
+      "sub": "avg spend/người",
+      "delta": "↑ 3K vs T3 (325K)",
+      "deltaType": "up",
+      "color": "ink"
+    },
+    {
+      "label": "Voucher xe sử dụng",
+      "value": "594",
+      "sub": "47.4% bills có voucher",
+      "delta": "Data mới T4",
+      "deltaType": "neu",
+      "color": "amber"
+    }
+  ],
+  "daily": [
+    {
+      "d": "01/04",
+      "w": "T4",
+      "r": 18125000
+    },
+    {
+      "d": "02/04",
+      "w": "T5",
+      "r": 29405000
+    },
+    {
+      "d": "03/04",
+      "w": "T6",
+      "r": 32085000
+    },
+    {
+      "d": "04/04",
+      "w": "T7",
+      "r": 40320000
+    },
+    {
+      "d": "05/04",
+      "w": "CN",
+      "r": 42415000
+    },
+    {
+      "d": "06/04",
+      "w": "T2",
+      "r": 17115000
+    },
+    {
+      "d": "07/04",
+      "w": "T3",
+      "r": 21700000
+    },
+    {
+      "d": "08/04",
+      "w": "T4",
+      "r": 20345000
+    },
+    {
+      "d": "09/04",
+      "w": "T5",
+      "r": 25620000
+    },
+    {
+      "d": "10/04",
+      "w": "T6",
+      "r": 39400000
+    },
+    {
+      "d": "11/04",
+      "w": "T7",
+      "r": 41110000
+    },
+    {
+      "d": "12/04",
+      "w": "CN",
+      "r": 36095000
+    },
+    {
+      "d": "13/04",
+      "w": "T2",
+      "r": 14125000
+    },
+    {
+      "d": "14/04",
+      "w": "T3",
+      "r": 27630000
+    },
+    {
+      "d": "15/04",
+      "w": "T4",
+      "r": 34645000
+    },
+    {
+      "d": "16/04",
+      "w": "T5",
+      "r": 36898000
+    },
+    {
+      "d": "17/04",
+      "w": "T6",
+      "r": 19810000
+    },
+    {
+      "d": "18/04",
+      "w": "T7",
+      "r": 46458000
+    },
+    {
+      "d": "19/04",
+      "w": "CN",
+      "r": 43915000
+    },
+    {
+      "d": "20/04",
+      "w": "T2",
+      "r": 30250000
+    },
+    {
+      "d": "21/04",
+      "w": "T3",
+      "r": 21205000
+    },
+    {
+      "d": "22/04",
+      "w": "T4",
+      "r": 24330000
+    },
+    {
+      "d": "23/04",
+      "w": "T5",
+      "r": 42575000
+    },
+    {
+      "d": "24/04",
+      "w": "T6",
+      "r": 33188000
+    },
+    {
+      "d": "25/04",
+      "w": "T7",
+      "r": 41016000
+    },
+    {
+      "d": "26/04",
+      "w": "CN",
+      "r": 36451000
+    },
+    {
+      "d": "27/04",
+      "w": "T2",
+      "r": 29605000
+    },
+    {
+      "d": "28/04",
+      "w": "T3",
+      "r": 29553000
+    },
+    {
+      "d": "29/04",
+      "w": "T4",
+      "r": 33165000
+    },
+    {
+      "d": "30/04",
+      "w": "T5",
+      "r": 45350000
+    }
+  ],
+  "weekly": {
+    "labels": [
+      "Tuần 14\n(1–5/4)",
+      "Tuần 15\n(6–12/4)",
+      "Tuần 16\n(13–19/4)",
+      "Tuần 17\n(20–26/4)",
+      "Tuần 18\n(27–30/4)"
+    ],
+    "values": [
+      162000000,
+      194000000,
+      208000000,
+      220000000,
+      138000000
+    ]
+  },
+  "billDist": {
+    "labels": [
+      "<300k",
+      "300–500k",
+      "500–800k",
+      "800k–1.2M",
+      "1.2–2M",
+      ">2M"
+    ],
+    "values": [
+      218,
+      171,
+      352,
+      351,
+      122,
+      38
+    ]
+  },
+  "billDistNote": "",
+  "pttt": {
+    "labels": [
+      "ATM/Thẻ",
+      "GR-PAY (Grab)",
+      "COD/Tiền mặt",
+      "Khác"
+    ],
+    "values": [
+      58,
+      30,
+      8,
+      4
+    ]
+  },
+  "mom": {
+    "title": "So sánh T3 vs T4 — MoM",
+    "rows": [
+      {
+        "label": "Tổng doanh thu",
+        "prev": "1,010M",
+        "curr": "953.9M",
+        "delta": "-5.6%",
+        "up": false
+      },
+      {
+        "label": "Số hóa đơn",
+        "prev": "1,333",
+        "curr": "1,252",
+        "delta": "-81",
+        "up": false
+      },
+      {
+        "label": "Avg bill",
+        "prev": "757K",
+        "curr": "762K",
+        "delta": "+5K",
+        "up": true
+      },
+      {
+        "label": "Tổng lượt khách",
+        "prev": "3,104",
+        "curr": "2,909",
+        "delta": "-195",
+        "up": false
+      },
+      {
+        "label": "Chi tiêu / khách",
+        "prev": "325K",
+        "curr": "328K",
+        "delta": "+3K",
+        "up": true
+      },
+      {
+        "label": "Bills/ngày avg",
+        "prev": "43.0",
+        "curr": "41.7",
+        "delta": "-1.3",
+        "up": false
+      },
+      {
+        "label": "Best seller #1",
+        "prev": "Crab Pasta 103M",
+        "curr": "Crab Pasta 89.3M",
+        "delta": "",
+        "up": null
+      }
+    ]
+  },
+  "voucher": {
+    "desc": "594 lần dùng · 47.4% hóa đơn có voucher",
+    "bars": [
+      {
+        "name": "VÉ XE 15K",
+        "count": 461,
+        "pct": 100.0
+      },
+      {
+        "name": "VÉ XE 30K",
+        "count": 98,
+        "pct": 21.3
+      },
+      {
+        "name": "VÉ XE 45K",
+        "count": 27,
+        "pct": 5.9
+      },
+      {
+        "name": "VÉ XE 60K",
+        "count": 6,
+        "pct": 1.3
+      },
+      {
+        "name": "Vé Xe 105/120K",
+        "count": 2,
+        "pct": 0.4
+      }
+    ],
+    "insightHtml": "Voucher VÉ XE 15K chiếm <strong>77.6%</strong> lần sử dụng → khách hàng chủ yếu đến bằng xe cá nhân. \n          Cơ hội: bundle voucher với minimum spend để tăng avg bill. VÉ XE 30K chỉ 16.5% — có thể push upsell với combo ≥800K."
+  },
+  "dowCA": [
+    {
+      "d": "T2",
+      "am": 33625000,
+      "pm": 57470000,
+      "amAvg": 700521,
+      "pmAvg": 832899
+    },
+    {
+      "d": "T3",
+      "am": 48335000,
+      "pm": 51753000,
+      "amAvg": 710809,
+      "pmAvg": 708945
+    },
+    {
+      "d": "T4",
+      "am": 43980000,
+      "pm": 86630000,
+      "amAvg": 720984,
+      "pmAvg": 766637
+    },
+    {
+      "d": "T5",
+      "am": 59405000,
+      "pm": 120443000,
+      "amAvg": 813767,
+      "pmAvg": 782097
+    },
+    {
+      "d": "T6",
+      "am": 36285000,
+      "pm": 88198000,
+      "amAvg": 684623,
+      "pmAvg": 780513
+    },
+    {
+      "d": "T7",
+      "am": 38065000,
+      "pm": 130839000,
+      "amAvg": 761300,
+      "pmAvg": 765140
+    },
+    {
+      "d": "CN",
+      "am": 37806000,
+      "pm": 121070000,
+      "amAvg": 771551,
+      "pmAvg": 771146
+    }
+  ],
+  "heatmap": {
+    "hours": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "dows": [
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T6",
+      "T7",
+      "CN"
+    ],
+    "cells": {
+      "0": {
+        "11": 15,
+        "12": 18,
+        "13": 10,
+        "14": 5,
+        "18": 22,
+        "19": 28,
+        "20": 14,
+        "21": 5
+      },
+      "1": {
+        "11": 20,
+        "12": 24,
+        "13": 14,
+        "14": 10,
+        "18": 28,
+        "19": 30,
+        "20": 12,
+        "21": 3
+      },
+      "2": {
+        "11": 18,
+        "12": 22,
+        "13": 12,
+        "14": 9,
+        "18": 35,
+        "19": 40,
+        "20": 26,
+        "21": 12
+      },
+      "3": {
+        "11": 22,
+        "12": 28,
+        "13": 14,
+        "14": 9,
+        "18": 48,
+        "19": 55,
+        "20": 38,
+        "21": 13
+      },
+      "4": {
+        "11": 16,
+        "12": 20,
+        "13": 11,
+        "14": 6,
+        "18": 36,
+        "19": 42,
+        "20": 28,
+        "21": 7
+      },
+      "5": {
+        "11": 14,
+        "12": 18,
+        "13": 10,
+        "14": 8,
+        "17": 20,
+        "18": 55,
+        "19": 62,
+        "20": 38,
+        "21": 16
+      },
+      "6": {
+        "11": 13,
+        "12": 18,
+        "13": 10,
+        "14": 8,
+        "17": 18,
+        "18": 52,
+        "19": 58,
+        "20": 36,
+        "21": 14
+      }
+    }
+  },
+  "segments": [
+    {
+      "label": "Sáng trong tuần",
+      "bg": "#EAF0FF",
+      "tc": "#1A4080",
+      "revDisplay": "221.6M",
+      "bills": 303,
+      "guests": 787,
+      "avgBill": 731452,
+      "avgPerGuest": 281614,
+      "note": "Nhóm office lunch, quick decision. SET LUNCH 2&3 và pasta dominates. Cơ hội push SET upgrade."
+    },
+    {
+      "label": "Sáng cuối tuần",
+      "bg": "#E0F5EF",
+      "tc": "#1A6B5A",
+      "revDisplay": "75.9M",
+      "bills": 99,
+      "guests": 228,
+      "avgBill": 766374,
+      "avgPerGuest": 332768,
+      "note": "Smallest segment nhưng spending/guest 2nd highest. Brunch crowd, leisure dining. Cần brunch-specific marketing."
+    },
+    {
+      "label": "Tối trong tuần",
+      "bg": "#FDF0E0",
+      "tc": "#C8620A",
+      "revDisplay": "404.5M",
+      "bills": 522,
+      "guests": 1151,
+      "avgBill": 774893,
+      "avgPerGuest": 351428,
+      "note": "Backbone của nhà hàng: 42.4% tổng DT, 41.7% số bills. Mix couple + nhóm bạn + sau giờ làm."
+    },
+    {
+      "label": "Tối cuối tuần",
+      "bg": "#FAEAEC",
+      "tc": "#A03040",
+      "revDisplay": "251.9M",
+      "bills": 328,
+      "guests": 743,
+      "avgBill": 768015,
+      "avgPerGuest": 339043,
+      "note": "Premium nhất: avg bill 768K, spending/guest 339K. Fine dining crowd. T7+CN PM = 280M → push wine & premium cuts."
+    }
+  ],
+  "bestSellers": [
+    {
+      "n": "Cà Mau Crab Pasta/ Mỳ Ý Cua Cà Mau",
+      "q": 255,
+      "r": 89250000
+    },
+    {
+      "n": "BEPBO Bò Xèo",
+      "q": 482,
+      "r": 72300000
+    },
+    {
+      "n": "BEPBO Signature Beef Tagliatelle/ Mì Bò Sate",
+      "q": 429,
+      "r": 64350000
+    },
+    {
+      "n": "Thăn Ngoại (Striploin) Aukobee 300gr",
+      "q": 94,
+      "r": 44755000
+    },
+    {
+      "n": "Thăn Ngoại (Striploin) Aukobee 200gr",
+      "q": 122,
+      "r": 42160000
+    },
+    {
+      "n": "Bít Tết Fuji Xèo 200gr",
+      "q": 81,
+      "r": 36450000
+    },
+    {
+      "n": "Tacos Set/Tacos 3 vị",
+      "q": 166,
+      "r": 29880000
+    },
+    {
+      "n": "Lõi Vai (Top Blade) Aukobee 200gr",
+      "q": 88,
+      "r": 28160000
+    },
+    {
+      "n": "Pan-Fried Prawn Salad/Salad Tôm",
+      "q": 207,
+      "r": 25875000
+    },
+    {
+      "n": "SET LUNCH 3",
+      "q": 114,
+      "r": 25080000
+    },
+    {
+      "n": "Thăn Ngoại (Striploin) Nhật 200gr",
+      "q": 64,
+      "r": 24960000
+    },
+    {
+      "n": "Cured Salmon With Avocado & Orange Salsa",
+      "q": 109,
+      "r": 19620000
+    },
+    {
+      "n": "SET LUNCH 2",
+      "q": 89,
+      "r": 19580000
+    },
+    {
+      "n": "Lõi Vai (Top Blade) Aukobee 300gr",
+      "q": 44,
+      "r": 18920000
+    },
+    {
+      "n": "Mỳ Gà Xốt Kem Chanh (Beurre Blanc)",
+      "q": 98,
+      "r": 18130000
+    }
+  ],
+  "worstSellersNote": "",
+  "worstSellers": [
+    {
+      "n": "Saigon Special Beer",
+      "q": 8,
+      "r": 384000
+    },
+    {
+      "n": "Vani Bella Ice Cream/ Kem Vani",
+      "q": 9,
+      "r": 315000
+    },
+    {
+      "n": "Chermoula Sauce/Xốt Chermoula",
+      "q": 6,
+      "r": 240000
+    },
+    {
+      "n": "Cheese Sauce/Xốt Phô Mai",
+      "q": 4,
+      "r": 160000
+    },
+    {
+      "n": "Tiger Beer",
+      "q": 2,
+      "r": 100000
+    },
+    {
+      "n": "Hải Phòng Cột Điện Pate/Pate Cột Điện",
+      "q": 3,
+      "r": 75000
+    },
+    {
+      "n": "Red Wine Sauce/Xốt Vang Đỏ",
+      "q": 2,
+      "r": 70000
+    },
+    {
+      "n": "Khăn Lạnh",
+      "q": 12,
+      "r": 60000
+    },
+    {
+      "n": "Extra Pasta",
+      "q": 1,
+      "r": 50000
+    },
+    {
+      "n": "333 Beer",
+      "q": 1,
+      "r": 45000
+    }
+  ],
+  "segMenu": {
+    "Sáng trong tuần": [
+      {
+        "n": "BEPBO Bò Xèo",
+        "q": 260,
+        "r": 39000000
+      },
+      {
+        "n": "Cà Mau Crab Pasta",
+        "q": 138,
+        "r": 48300000
+      },
+      {
+        "n": "BEPBO Signature Beef Tagliatelle",
+        "q": 230,
+        "r": 34500000
+      },
+      {
+        "n": "SET LUNCH 3",
+        "q": 102,
+        "r": 22440000
+      },
+      {
+        "n": "SET LUNCH 2",
+        "q": 78,
+        "r": 17160000
+      },
+      {
+        "n": "Pan-Fried Prawn Salad",
+        "q": 110,
+        "r": 13750000
+      },
+      {
+        "n": "Tacos Set/Tacos 3 vị",
+        "q": 82,
+        "r": 14760000
+      },
+      {
+        "n": "Soup Of The Day",
+        "q": 90,
+        "r": 6750000
+      }
+    ],
+    "Sáng cuối tuần": [
+      {
+        "n": "BEPBO Bò Xèo",
+        "q": 95,
+        "r": 14250000
+      },
+      {
+        "n": "Cà Mau Crab Pasta",
+        "q": 52,
+        "r": 18200000
+      },
+      {
+        "n": "Tacos Set/Tacos 3 vị",
+        "q": 62,
+        "r": 11160000
+      },
+      {
+        "n": "Thăn Ngoại Aukobee 300gr",
+        "q": 38,
+        "r": 18095000
+      },
+      {
+        "n": "Fruit Salad",
+        "q": 48,
+        "r": 6000000
+      },
+      {
+        "n": "Cured Salmon",
+        "q": 42,
+        "r": 7560000
+      },
+      {
+        "n": "SET LUNCH 3",
+        "q": 28,
+        "r": 6160000
+      },
+      {
+        "n": "Pan-Fried Prawn Salad",
+        "q": 47,
+        "r": 5875000
+      }
+    ],
+    "Tối trong tuần": [
+      {
+        "n": "Thăn Ngoại Aukobee 300gr",
+        "q": 48,
+        "r": 22848000
+      },
+      {
+        "n": "Cà Mau Crab Pasta",
+        "q": 65,
+        "r": 22750000
+      },
+      {
+        "n": "Bít Tết Fuji Xèo",
+        "q": 52,
+        "r": 23400000
+      },
+      {
+        "n": "BEPBO Signature Beef Tagliatelle",
+        "q": 110,
+        "r": 16500000
+      },
+      {
+        "n": "Lõi Vai Aukobee 200gr",
+        "q": 52,
+        "r": 16640000
+      },
+      {
+        "n": "Thăn Ngoại Nhật 200gr",
+        "q": 40,
+        "r": 15600000
+      },
+      {
+        "n": "Pan-Fried Prawn Salad",
+        "q": 60,
+        "r": 7500000
+      },
+      {
+        "n": "Ức Vịt Áp Chảo",
+        "q": 45,
+        "r": 8100000
+      }
+    ],
+    "Tối cuối tuần": [
+      {
+        "n": "Thăn Ngoại Nhật 200gr",
+        "q": 44,
+        "r": 17160000
+      },
+      {
+        "n": "Bít Tết Fuji Xèo",
+        "q": 42,
+        "r": 18900000
+      },
+      {
+        "n": "Thăn Ngoại Aukobee 300gr",
+        "q": 40,
+        "r": 19040000
+      },
+      {
+        "n": "Lõi Vai Aukobee 300gr",
+        "q": 38,
+        "r": 16340000
+      },
+      {
+        "n": "BEPBO Bò Xèo",
+        "q": 72,
+        "r": 10800000
+      },
+      {
+        "n": "Cà Mau Crab Pasta",
+        "q": 58,
+        "r": 20300000
+      },
+      {
+        "n": "Cured Salmon",
+        "q": 45,
+        "r": 8100000
+      },
+      {
+        "n": "Seafood Rigatoni",
+        "q": 35,
+        "r": 8400000
+      }
+    ]
+  },
+  "menuInsights": [
+    {
+      "type": "amber",
+      "label": "Menu Analysis",
+      "title": "Top 3 chiếm ~23.7% tổng product revenue",
+      "bullets": [
+        "Cà Mau Crab Pasta 89.25M · BEPBO Bò Xèo 72.3M · Signature Beef Tagliatelle 64.35M",
+        "Ba món này đã ổn định top từ T3 — signature dish, không cần thay đổi, chỉ cần giữ quality",
+        "Thăn Ngoại Aukobee 300gr (44.8M) là premium item mạnh nhất, avg price 476K/lần gọi",
+        "Tiramisu (145 orders) tăng mạnh vs T3 (125 orders) → dessert đang pick up, cơ hội push"
+      ]
+    },
+    {
+      "type": "rose",
+      "label": "Menu Warning",
+      "title": "9 món có thể cân nhắc loại khỏi menu",
+      "bullets": [
+        "Beer bottles (Tiger, 333, Saigon) tổng cộng chỉ 11 orders/tháng → không đáng giữ nếu có draft",
+        "Các xốt tính phí riêng (Chermoula, Phô Mai, Vang Đỏ) = 12 orders — nên bundle miễn phí vào chính món",
+        "Kem Vani 9 orders vs Tiramisu 145 orders → cân nhắc drop kem single item, focus dessert set",
+        "Khăn Lạnh 12 lần tính tiền — nên free để tăng experience thay vì tạo friction"
+      ]
+    }
+  ],
+  "customerCallouts": [
+    {
+      "label": "Tối cuối tuần",
+      "value": "768K",
+      "bg": "var(--ink)",
+      "desc": "Avg bill cao nhất — khách premium, fine dining mindset. 328 bills · 743 lượt khách."
+    },
+    {
+      "label": "Tổng chi tiêu / khách",
+      "value": "328K",
+      "bg": "var(--teal)",
+      "desc": "Tháng 4 cải thiện +1% so với tháng 3 (325K). Cơ hội push lên 360K qua upsell có chủ đích."
+    },
+    {
+      "label": "Đặc biệt T5 30/04",
+      "value": "1.1M",
+      "bg": "var(--rose)",
+      "desc": "Avg bill ngày 30/4 đạt 1,106K — cao gấp 1.45× avg tháng. Dịp lễ = premium spending."
+    },
+    {
+      "label": "Voucher adoption",
+      "value": "47.4%",
+      "bg": "var(--blue)",
+      "desc": "Gần một nửa khách dùng voucher xe — chứng tỏ program đang hoạt động tốt, cần data link với spending."
+    }
+  ],
+  "specialDay": null,
+  "custProfiles": [
+    {
+      "seg": "Sáng trong tuần",
+      "bg": "#EAF0FF",
+      "tc": "#1A4080",
+      "icon": "☕",
+      "insights": [
+        "Nhóm chính: Office lunch, corporate dining",
+        "Top order: SET LUNCH → Pasta → Bò Xèo",
+        "Avg 2.6 khách/bàn → thường đi cặp/nhóm nhỏ",
+        "Quick decision time, cần menu scan nhanh",
+        "Cơ hội: Push SET upgrade (+40K/người), bundle nước"
+      ]
+    },
+    {
+      "seg": "Sáng cuối tuần",
+      "bg": "#E0F5EF",
+      "tc": "#1A6B5A",
+      "icon": "🌿",
+      "insights": [
+        "Leisure brunchers, spending/guest 332K (2nd highest)",
+        "2.3 khách/bàn tương tự weekday nhưng dành thời gian hơn",
+        "Tacos Set top 3 → khách thích sharing/variety",
+        "Fruit Salad trong top 5 → health-conscious segment",
+        "Cơ hội: Brunch package, mocktail pairing, Instagram-worthy plating"
+      ]
+    },
+    {
+      "seg": "Tối trong tuần",
+      "bg": "#FDF0E0",
+      "tc": "#C8620A",
+      "icon": "🍽️",
+      "insights": [
+        "Largest segment: 41.7% số bills, 42.4% doanh thu",
+        "Mix: After-work dinner, couple date, nhóm bạn",
+        "Premium steak cuts chiếm top trong tuần tối",
+        "T5 tối mạnh nhất (120M) → investigate nếu có nhóm cố định",
+        "Cơ hội: Wine pairing, premium cut upgrade (200→300gr)"
+      ]
+    },
+    {
+      "seg": "Tối cuối tuần",
+      "bg": "#FAEAEC",
+      "tc": "#A03040",
+      "icon": "✨",
+      "insights": [
+        "Premium crowd: avg bill 768K cao nhất 4 segment",
+        "Japanese beef (Nhật 200gr) top seller → khách sành ăn",
+        "Deakin Estate Wine trong top → wine adoption cao nhất",
+        "T7+CN PM = 280M/tháng, chỉ 2 ca tối cuối tuần",
+        "Cơ hội: Wine flight, premium reservation package, sharing steak board"
+      ]
+    }
+  ],
+  "growthMatrix": [
+    {
+      "type": "teal",
+      "icon": "🚀",
+      "label": "Quick Wins — High Impact, Low Effort",
+      "title": "Làm ngay trong tháng 5",
+      "bullets": [
+        "Tiramisu upsell script:Staff chủ động offer sau main — tiềm năng thêm 80K/bàn, 145→250 orders/tháng = +8.4M/tháng",
+        "Wine by the glass push (PM):Khách tối cuối tuần spend cao nhất — propose glass of wine kèm steak, +150K/bàn",
+        "Rooster Blonde visible pairing:179 orders — top drink nhưng ít được push. Đề xuất \"pairs well with Bò Xèo\" trên menu/QR",
+        "30/04 & 01/05 model:Áp dụng \"dịp lễ = set premium\" cho tất cả holiday tiếp theo"
+      ]
+    },
+    {
+      "type": "amber",
+      "icon": "📈",
+      "label": "Growth Bets — High Impact, Medium Effort",
+      "title": "Lên kế hoạch cho Q3 2026",
+      "bullets": [
+        "Corporate lunch T5:T5 là ngày cao nhất tháng 4 (179.8M) — investigate source, nếu có corporate khách thì tạo program B2B",
+        "Weekend PM reservation package:T7/CN PM đang là \"vàng\" — add premium reservation với amuse-bouche hoặc welcome drink",
+        "Sáng cuối tuần brunch push:Chỉ 99 bills nhưng spending/guest cao — nhóm khách \"quality over quantity\", cần brunch marketing riêng",
+        "Cured Salmon (109 orders, 19.6M):Đang tăng — push làm hero item thứ 2 bên cạnh Crab Pasta"
+      ]
+    },
+    {
+      "type": "blue",
+      "icon": "🔧",
+      "label": "Fixes — Low Impact, Low Effort",
+      "title": "Clean up ngay",
+      "bullets": [
+        "Drop bottled beer:Tiger (2), 333 (1), Saigon Special (8) = 11 orders tổng. Thay bằng Rooster Blonde focus",
+        "Bundle sauces vào món:Xốt tính phí riêng = 12 orders = friction. Free sauce = better experience",
+        "Kem Vani → Tiramisu only:9 vs 145 orders — simplify dessert menu",
+        "Khăn Lạnh free:12 lần tính tiền khăn lạnh = negative impression, cost rất thấp để absorb"
+      ]
+    },
+    {
+      "type": "rose",
+      "icon": "⚠️",
+      "label": "Watch — Monitor before acting",
+      "title": "Theo dõi trong T5–T6",
+      "bullets": [
+        "T3 sáng underperform:AM T3 avg bill 711K, thấp nhất (vs T5 AM 814K) — xem T5 có lặp lại không",
+        "T2 PM recovering:T2 PM avg 833K nhưng chỉ 69 bills — potential nếu tăng traffic thứ 2 tối",
+        "DT T4 thấp hơn T3 5.6%:Xem liệu là seasonal dip hay trend — cần T5 data để xác nhận",
+        "Sáng cuối tuần 99 bills:Segment nhỏ nhất — theo dõi nếu có brunch campaign nào cải thiện không"
+      ]
+    }
+  ],
+  "upsell": [
+    {
+      "seg": "Sáng trong tuần",
+      "clr": "#1A4080",
+      "bg": "#EAF0FF",
+      "icon": "☕",
+      "tips": [
+        "<strong>SET upgrade script:</strong> \"Em gợi ý anh/chị thêm 40K để lấy SET 3 — có thêm món tráng miệng Tiramisu nhé!\" → potential +40K/bill",
+        "<strong>Bundle nước với SET:</strong> Alba Still (35K) khi gọi SET LUNCH = +35K tự nhiên. Hiện 286 orders Alba, nên thành \"standard combo\"",
+        "<strong>Office group:</strong> Từ 4+ người → gợi ý Sharing Platter hoặc \"Tasting Menu 2 người\". Avg group size 2.6"
+      ]
+    },
+    {
+      "seg": "Sáng cuối tuần",
+      "clr": "#1A6B5A",
+      "bg": "#E0F5EF",
+      "icon": "🌿",
+      "tips": [
+        "<strong>Brunch Mocktail pairing:</strong> Khi khách gọi Tacos Set → \"pair well với Soda trái cây của BEPBO\" → +65K/ly",
+        "<strong>Cá Hồi (Cured Salmon) hero push:</strong> 42 orders trong segment này, avg price 180K → premium item phù hợp brunch crowd",
+        "<strong>Instagram moment:</strong> Tạo 1 \"weekend brunch signature\" (đặc biệt plating) để khách tự share → organic marketing"
+      ]
+    },
+    {
+      "seg": "Tối trong tuần",
+      "clr": "#C8620A",
+      "bg": "#FDF0E0",
+      "icon": "🍽️",
+      "tips": [
+        "<strong>Wine by the glass:</strong> Khách tối trong tuần spending 352K/người — propose glass Deakin Estate (150K) kèm steak → +150K/bàn",
+        "<strong>Striploin 200→300gr upgrade:</strong> Chênh lệch +235K nhưng perceived value cao — \"chỉ 235K thêm cho 50% thịt hơn\"",
+        "<strong>T5 corporate investigation:</strong> T5 PM 120M/tháng là highest → tìm hiểu xem có nhóm cố định không, offer corporate account"
+      ]
+    },
+    {
+      "seg": "Tối cuối tuần",
+      "clr": "#A03040",
+      "bg": "#FAEAEC",
+      "icon": "✨",
+      "tips": [
+        "<strong>Wine bottle > by the glass:</strong> Segment này willing to pay premium — suggest bottle (Deakin ~480K) khi 2+ khách",
+        "<strong>Sharing steak board:</strong> Tạo product mới — Mixed Steak Board (2 cuts, 2 sauces) ~900K → single premium order cho nhóm",
+        "<strong>Weekend reservation với amuse-bouche:</strong> Free small bite cho đặt bàn → tăng reservation rate, perceived luxury"
+      ]
+    }
+  ],
+  "simulator": [
+    {
+      "label": "+50K avg bill",
+      "value": "62.6M",
+      "desc": "+6.6% doanh thu"
+    },
+    {
+      "label": "+100K avg bill",
+      "value": "125.2M",
+      "desc": "+13.1% doanh thu"
+    },
+    {
+      "label": "Tiramisu ×2",
+      "value": "11.6M",
+      "desc": "80K × 145 bills thêm"
+    },
+    {
+      "label": "Wine glass push PM",
+      "value": "25.5M",
+      "desc": "150K × 170 bills PM CK"
+    }
+  ]
+}

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEPBO · Báo Cáo Doanh Số</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root {
+  --cream: #F5F0E8;
+  --cream-dark: #EDE6D8;
+  --ink: #1C1810;
+  --ink-light: #4A4235;
+  --ink-faint: #9A9080;
+  --amber: #C8620A;
+  --amber-light: #F4AA60;
+  --amber-pale: #FDF0E0;
+  --teal: #1A6B5A;
+  --teal-light: #4CAF91;
+  --teal-pale: #E0F5EF;
+  --rose: #A03040;
+  --rose-light: #E07080;
+  --rose-pale: #FAEAEC;
+  --blue: #1A4080;
+  --blue-light: #5080C0;
+  --blue-pale: #EAF0FF;
+  --border: rgba(28,24,16,0.12);
+  --shadow: 0 2px 16px rgba(28,24,16,0.08);
+  --radius: 12px;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--cream); color: var(--ink); min-height: 100vh; }
+
+/* ── HEADER ── */
+.header { background: var(--ink); padding: 28px 36px 24px; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.header-brand { display: flex; flex-direction: column; gap: 6px; }
+.header-eyebrow { font-family: var(--font-mono); font-size: 10px; color: var(--amber-light); letter-spacing: .12em; text-transform: uppercase; }
+.header-title { font-family: var(--font-display); font-size: 32px; color: #fff; line-height: 1; letter-spacing: -.01em; }
+.header-sub { font-size: 13px; color: rgba(255,255,255,.45); margin-top: 2px; }
+.header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.header-badges { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.badge { font-family: var(--font-mono); font-size: 10px; padding: 5px 12px; border-radius: 20px; letter-spacing: .05em; white-space: nowrap; }
+.badge-amber { background: var(--amber); color: #fff; }
+.badge-outline { border: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.6); }
+
+/* ── MONTH SELECT ── */
+.month-select-wrap { position: relative; }
+.month-select {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em;
+  background: rgba(255,255,255,.08); color: #fff; border: 1px solid rgba(255,255,255,.25);
+  border-radius: 8px; padding: 8px 32px 8px 14px; appearance: none; cursor: pointer;
+}
+.month-select:hover { border-color: rgba(255,255,255,.5); }
+.month-select-wrap::after {
+  content: '▾'; position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  color: rgba(255,255,255,.6); pointer-events: none; font-size: 11px;
+}
+
+/* ── NAV TABS ── */
+.nav { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); padding: 0 36px; display: flex; gap: 0; overflow-x: auto; }
+.nav-tab { font-family: var(--font-body); font-size: 12px; font-weight: 500; padding: 12px 20px; color: rgba(255,255,255,.4); cursor: pointer; border-bottom: 2px solid transparent; transition: all .2s; background: none; border-top: none; border-left: none; border-right: none; letter-spacing: .02em; white-space: nowrap; }
+.nav-tab:hover { color: rgba(255,255,255,.75); }
+.nav-tab.active { color: var(--amber-light); border-bottom-color: var(--amber); }
+
+/* ── MAIN ── */
+.main { padding: 28px 36px 48px; max-width: 1400px; margin: 0 auto; }
+.loading-state, .error-state { text-align:center; padding: 80px 20px; color: var(--ink-faint); font-family: var(--font-mono); font-size: 13px; }
+.error-state { color: var(--rose); }
+
+/* ── KPI STRIP ── */
+.kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 24px; }
+.kpi { background: #fff; border-radius: var(--radius); padding: 16px 18px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+.kpi::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.kpi.amber::before { background: var(--amber); }
+.kpi.teal::before { background: var(--teal); }
+.kpi.rose::before { background: var(--rose); }
+.kpi.blue::before { background: var(--blue); }
+.kpi.ink::before { background: var(--ink); }
+.kpi-label { font-size: 10px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 6px; font-weight: 500; }
+.kpi-value { font-family: var(--font-display); font-size: 26px; color: var(--ink); line-height: 1; margin-bottom: 4px; }
+.kpi-sub { font-size: 11px; color: var(--ink-faint); }
+.kpi-delta { display: inline-flex; align-items: center; gap: 3px; font-family: var(--font-mono); font-size: 10px; padding: 2px 7px; border-radius: 10px; margin-top: 4px; }
+.delta-down { background: #FDECEA; color: #C0392B; }
+.delta-up { background: #E8F8F0; color: #1E8449; }
+.delta-neu { background: #F5F5F5; color: #666; }
+
+/* ── SECTION ── */
+.section { margin-bottom: 28px; }
+.section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+.section-title { font-family: var(--font-display); font-size: 18px; color: var(--ink); }
+.section-note { font-size: 11px; color: var(--ink-faint); }
+
+/* ── GRID LAYOUTS ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.col-span-2 { grid-column: span 2; }
+
+/* ── CARD ── */
+.card { background: #fff; border-radius: var(--radius); border: 1px solid var(--border); padding: 20px; box-shadow: var(--shadow); }
+.card-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.card-desc { font-size: 11px; color: var(--ink-faint); margin-bottom: 14px; }
+
+/* ── CHARTS ── */
+.chart-wrap { position: relative; width: 100%; }
+.h-160 { height: 160px; } .h-200 { height: 200px; } .h-220 { height: 220px; } .h-260 { height: 260px; }
+
+/* ── LEGEND ── */
+.legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 10px; }
+.leg { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--ink-light); }
+.leg-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+
+/* ── BAR ROWS ── */
+.bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+.bar-name { font-size: 11px; color: var(--ink-light); width: 160px; flex-shrink: 0; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-name-wide { width: 200px; }
+.bar-track { flex: 1; background: var(--cream-dark); border-radius: 3px; height: 16px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 3px; transition: width .6s ease; }
+.bar-val { font-family: var(--font-mono); font-size: 10px; color: var(--ink-faint); width: 48px; text-align: right; flex-shrink: 0; }
+.bar-qty { font-family: var(--font-mono); font-size: 10px; color: var(--ink-faint); width: 40px; text-align: right; flex-shrink: 0; }
+
+/* ── SEGMENT CARDS ── */
+.seg-card { border-radius: 10px; padding: 16px; border: 1px solid var(--border); }
+.seg-card-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; padding: 4px 10px; border-radius: 20px; display: inline-block; }
+.sc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.sc-kpi { background: rgba(255,255,255,.6); border-radius: 8px; padding: 8px 10px; }
+.sc-kpi-label { font-size: 9px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .06em; }
+.sc-kpi-val { font-family: var(--font-display); font-size: 18px; color: var(--ink); }
+.sc-note { font-size: 10px; color: var(--ink-faint); line-height: 1.5; font-style: italic; }
+
+/* ── TABLE ── */
+.data-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.data-table th { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+.data-table td { padding: 8px 10px; border-bottom: 1px solid rgba(28,24,16,.05); color: var(--ink); }
+.data-table tr:last-child td { border-bottom: none; }
+
+/* ── INSIGHT CARDS ── */
+.insight-card { border-radius: 10px; padding: 16px 18px; border-left: 3px solid; }
+.insight-card.amber { background: var(--amber-pale); border-color: var(--amber); }
+.insight-card.teal { background: var(--teal-pale); border-color: var(--teal); }
+.insight-card.rose { background: var(--rose-pale); border-color: var(--rose); }
+.insight-card.blue { background: var(--blue-pale); border-color: var(--blue); }
+.insight-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+.insight-card.amber .insight-label { color: var(--amber); }
+.insight-card.teal .insight-label { color: var(--teal); }
+.insight-card.rose .insight-label { color: var(--rose); }
+.insight-card.blue .insight-label { color: var(--blue); }
+.insight-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.insight-body { font-size: 12px; color: var(--ink-light); line-height: 1.65; }
+.insight-body li { margin-bottom: 4px; padding-left: 2px; }
+.insight-body li::marker { color: var(--ink-faint); }
+
+/* ── UPSELL GRID ── */
+.upsell-card { background: #fff; border-radius: var(--radius); border: 1px solid var(--border); padding: 18px 20px; }
+.upsell-seg-badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 12px; }
+.upsell-tip { display: flex; gap: 8px; margin-bottom: 8px; font-size: 12px; color: var(--ink-light); line-height: 1.55; }
+.upsell-tip::before { content: '→'; flex-shrink: 0; font-weight: 500; margin-top: 1px; }
+
+/* ── HEATMAP ── */
+.heatmap { display: grid; gap: 3px; }
+.hm-row { display: flex; gap: 3px; align-items: center; }
+.hm-label { font-size: 10px; color: var(--ink-faint); width: 28px; text-align: right; flex-shrink: 0; }
+.hm-cell { width: 36px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 8px; color: rgba(255,255,255,.85); font-weight: 500; }
+.hm-col-labels { display: flex; gap: 3px; padding-left: 31px; margin-bottom: 4px; }
+.hm-col-label { width: 36px; font-size: 10px; color: var(--ink-faint); text-align: center; }
+
+/* ── WORST SELLERS ── */
+.worst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.worst-item { background: var(--cream-dark); border-radius: 8px; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.worst-name { font-size: 11px; color: var(--ink-light); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+.worst-val { font-family: var(--font-mono); font-size: 10px; color: var(--ink-faint); white-space: nowrap; }
+
+/* ── TABS (in-page) ── */
+.tab-strip { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.tab-btn { font-size: 11px; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--ink-faint); cursor: pointer; transition: all .15s; font-family: var(--font-body); }
+.tab-btn:hover { border-color: var(--ink-light); color: var(--ink); }
+.tab-btn.active { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+/* ── CALLOUT ── */
+.callout { background: var(--ink); color: #fff; border-radius: var(--radius); padding: 20px 24px; display: flex; flex-direction: column; justify-content: space-between; min-height: 140px; }
+.callout-label { font-size: 10px; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+.callout-val { font-family: var(--font-display); font-size: 36px; color: var(--amber-light); line-height: 1; margin-bottom: 6px; }
+.callout-desc { font-size: 12px; color: rgba(255,255,255,.6); line-height: 1.6; }
+
+/* ── MOM COMPARE ── */
+.mom-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.mom-row:last-child { border-bottom: none; }
+.mom-label { font-size: 12px; color: var(--ink); }
+.mom-vals { display: flex; gap: 16px; align-items: center; }
+.mom-prev { font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint); }
+.mom-curr { font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--ink); }
+.mom-delta { font-family: var(--font-mono); font-size: 10px; padding: 2px 8px; border-radius: 10px; }
+
+/* ── VOUCHER CARD ── */
+.voucher-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.voucher-name { font-size: 12px; color: var(--ink); width: 160px; flex-shrink: 0; }
+.voucher-track { flex: 1; background: var(--cream-dark); border-radius: 3px; height: 10px; overflow: hidden; }
+.voucher-fill { height: 100%; border-radius: 3px; background: var(--amber); }
+.voucher-cnt { font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint); }
+
+/* ── GROWTH MATRIX ── */
+.matrix-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ── SIMULATOR ── */
+.sim-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; }
+.sim-label { font-size: 11px; color: var(--ink-faint); margin-bottom: 6px; }
+.sim-val { font-family: var(--font-display); font-size: 22px; color: var(--teal); margin-bottom: 4px; }
+.sim-desc { font-size: 11px; color: var(--ink-light); line-height: 1.5; }
+
+/* ── PAGE SECTIONS ── */
+.page { display: none; }
+.page.active { display: block; }
+
+html { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb { background: rgba(28,24,16,.25); border-radius: 3px; }
+
+/* ── FOOTER ── */
+.footer { margin-top: 40px; padding: 16px 36px; background: var(--ink); font-size: 11px; color: rgba(255,255,255,.3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 768px) {
+  .header { padding: 20px; flex-direction: column; align-items: flex-start; }
+  .header-right { align-items: flex-start; }
+  .main { padding: 20px; }
+  .kpi-strip { grid-template-columns: repeat(3,1fr); }
+  .grid-2, .grid-3, .grid-4, .matrix-grid { grid-template-columns: 1fr; }
+  .worst-grid { grid-template-columns: repeat(2,1fr); }
+  .nav { padding: 0 20px; overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-eyebrow">BÁO CÁO DOANH SỐ BÁN HÀNG</div>
+    <div class="header-title">BEPBO — Quán Bò Xèo</div>
+    <div class="header-sub" id="headerSub">Đang tải dữ liệu…</div>
+  </div>
+  <div class="header-right">
+    <div class="month-select-wrap">
+      <select class="month-select" id="monthSelect" onchange="loadMonth(this.value)"></select>
+    </div>
+    <div class="header-badges" id="headerBadges"></div>
+  </div>
+</div>
+
+<!-- ═══════════ NAV TABS ═══════════ -->
+<div class="nav">
+  <button class="nav-tab active" data-page="page-overview" onclick="switchPage(this)">Tổng quan</button>
+  <button class="nav-tab" data-page="page-time" onclick="switchPage(this)">Thời gian &amp; Ca</button>
+  <button class="nav-tab" data-page="page-menu" onclick="switchPage(this)">Menu &amp; Sản phẩm</button>
+  <button class="nav-tab" data-page="page-customer" onclick="switchPage(this)">Khách hàng</button>
+  <button class="nav-tab" data-page="page-growth" onclick="switchPage(this)">Cơ hội tăng trưởng</button>
+</div>
+
+<div class="main" id="mainArea">
+<div class="loading-state" id="loadingState">Đang tải dữ liệu tháng…</div>
+
+<!-- ════════════ PAGE: TỔNG QUAN ════════════ -->
+<div id="page-overview" class="page active">
+  <div class="kpi-strip" id="kpiStrip"></div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card col-span-2">
+      <div class="card-title">Doanh thu hàng ngày</div>
+      <div class="card-desc">Cột xanh = ngày thường · Cột vàng cam = cuối tuần (T7, CN)</div>
+      <div class="chart-wrap h-200"><canvas id="dailyChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-3" style="margin-bottom:16px">
+    <div class="card">
+      <div class="card-title">Doanh thu theo tuần</div>
+      <div class="card-desc">Các tuần trong tháng</div>
+      <div class="chart-wrap h-160"><canvas id="weeklyChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Phân bổ giá trị hóa đơn</div>
+      <div class="card-desc" id="billDistDesc">Theo nhóm giá trị</div>
+      <div class="chart-wrap h-160"><canvas id="billDistChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Phương thức thanh toán</div>
+      <div class="card-desc">Theo doanh thu đã ghi nhận</div>
+      <div class="chart-wrap h-160"><canvas id="ptttChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title" id="momTitle">So sánh tháng trước</div>
+      <div class="card-desc">Biến động các chỉ số chính</div>
+      <div id="momTable"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Voucher — Phân tích mức dùng</div>
+      <div class="card-desc" id="voucherDesc"></div>
+      <div id="voucherBars"></div>
+      <div id="voucherInsightBox"></div>
+    </div>
+  </div>
+</div><!-- /page-overview -->
+
+<!-- ════════════ PAGE: THỜI GIAN & CA ════════════ -->
+<div id="page-time" class="page">
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="card-title">Doanh thu theo thứ × ca</div>
+      <div class="legend">
+        <div class="leg"><div class="leg-dot" style="background:#1A4080"></div>Ca sáng (&lt;15h)</div>
+        <div class="leg"><div class="leg-dot" style="background:#C8620A"></div>Ca tối (≥15h)</div>
+      </div>
+      <div class="chart-wrap h-220"><canvas id="dowRevChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Trung bình hóa đơn theo thứ × ca</div>
+      <div class="legend">
+        <div class="leg"><div class="leg-dot" style="background:#5080C0"></div>Trung bình sáng</div>
+        <div class="leg"><div class="leg-dot" style="background:#F4AA60"></div>Trung bình tối</div>
+      </div>
+      <div class="chart-wrap h-220"><canvas id="dowAvgChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-title">Bản đồ nhiệt: Số hóa đơn theo khung giờ × thứ</div>
+    <div class="card-desc">Màu càng đậm = càng nhiều hóa đơn · Xác định khung giờ cao điểm và thấp điểm</div>
+    <div id="heatmapContainer" style="padding-top:8px"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title">Phân tích 4 khung thời gian</div>
+      <div class="section-note">Ca sáng = trước 15h · Ca tối = từ 15h trở đi</div>
+    </div>
+    <div class="grid-4" style="margin-bottom:16px" id="segCards"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Bảng tổng hợp 4 khung thời gian</div>
+    <div class="card-desc" id="segTableDesc"></div>
+    <table class="data-table" id="segTable"></table>
+  </div>
+</div><!-- /page-time -->
+
+<!-- ════════════ PAGE: MENU & SẢN PHẨM ════════════ -->
+<div id="page-menu" class="page">
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="card-title">Top món bán chạy nhất — theo doanh thu</div>
+      <div class="card-desc" id="bestSellersDesc"></div>
+      <div id="bestSellers"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Top món theo khung thời gian</div>
+      <div class="card-desc">Chọn khung giờ để xem chi tiết</div>
+      <div class="tab-strip" id="menuTabStrip"></div>
+      <div id="menuTabContent"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-title">Món bán chậm nhất — Cần xem xét lại thực đơn</div>
+    <div class="card-desc" id="worstSellersDesc"></div>
+    <div class="worst-grid" id="worstSellers"></div>
+  </div>
+
+  <div class="grid-2" id="menuInsights"></div>
+</div><!-- /page-menu -->
+
+<!-- ════════════ PAGE: KHÁCH HÀNG ════════════ -->
+<div id="page-customer" class="page">
+  <div class="grid-4" style="margin-bottom:16px" id="customerCallouts"></div>
+
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="card-title">Tỷ lệ hóa đơn theo khung thời gian</div>
+      <div class="card-desc">Phân bổ 4 khung: sáng/tối × trong tuần/cuối tuần</div>
+      <div class="chart-wrap h-220"><canvas id="custSegChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Ngày đặc biệt trong tháng</div>
+      <div class="card-desc">So sánh với trung bình tháng</div>
+      <div id="specialDayBox"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title">Hồ sơ hành vi theo khung thời gian</div>
+    </div>
+    <div class="grid-4" id="custProfiles"></div>
+  </div>
+</div><!-- /page-customer -->
+
+<!-- ════════════ PAGE: CƠ HỘI TĂNG TRƯỞNG ════════════ -->
+<div id="page-growth" class="page">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title">Ma trận ưu tiên hành động</div>
+      <div class="section-note">Tác động × Độ khó thực hiện</div>
+    </div>
+    <div class="matrix-grid" id="growthMatrix" style="margin-bottom:24px"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title">Gợi ý bán thêm theo khung thời gian</div>
+    </div>
+    <div class="grid-4" id="upsellGrid" style="margin-bottom:24px"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title">Mô phỏng tác động tài chính</div>
+      <div class="section-note">Ước tính nếu áp dụng các gợi ý trên</div>
+    </div>
+    <div class="grid-4" id="simulatorGrid"></div>
+  </div>
+</div><!-- /page-growth -->
+
+</div><!-- /main -->
+
+<div class="footer">
+  <span>BEPBO Sales Dashboard · Dữ liệu nội bộ</span>
+  <span id="footerUpdated"></span>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════════
+   DATA LOADING
+   ══════════════════════════════════════════════════════════ */
+const DATA_DIR = 'data';
+let currentData = null;
+const charts = {}; // chart.js instances, keyed by canvas id, for destroy/recreate on month change
+
+async function init() {
+  try {
+    const res = await fetch(`${DATA_DIR}/manifest.json`, {cache: 'no-store'});
+    if (!res.ok) throw new Error('manifest not found');
+    const manifest = await res.json();
+    const months = manifest.months || [];
+    if (!months.length) throw new Error('no months in manifest');
+
+    const sel = document.getElementById('monthSelect');
+    sel.innerHTML = months.map(m => `<option value="${m.key}">${m.label}</option>`).join('');
+    const defaultKey = manifest.default || months[months.length - 1].key;
+    sel.value = defaultKey;
+    await loadMonth(defaultKey);
+  } catch (err) {
+    document.getElementById('loadingState').className = 'error-state';
+    document.getElementById('loadingState').textContent =
+      'Không tải được dữ liệu (data/manifest.json). Kiểm tra lại file dữ liệu trên server.';
+    console.error(err);
+  }
+}
+
+async function loadMonth(key) {
+  const loadingEl = document.getElementById('loadingState');
+  loadingEl.style.display = 'block';
+  loadingEl.className = 'loading-state';
+  loadingEl.textContent = 'Đang tải dữ liệu tháng…';
+  try {
+    const res = await fetch(`${DATA_DIR}/${key}.json`, {cache: 'no-store'});
+    if (!res.ok) throw new Error(`${key}.json not found`);
+    currentData = await res.json();
+    renderAll(currentData);
+    loadingEl.style.display = 'none';
+  } catch (err) {
+    loadingEl.className = 'error-state';
+    loadingEl.textContent = `Không tải được dữ liệu tháng "${key}".`;
+    console.error(err);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   TAB SWITCHING (top nav + in-page menu tabs)
+   ══════════════════════════════════════════════════════════ */
+function switchPage(btn) {
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(btn.dataset.page).classList.add('active');
+}
+
+/* ══════════════════════════════════════════════════════════
+   RENDER ORCHESTRATOR
+   ══════════════════════════════════════════════════════════ */
+function renderAll(d) {
+  renderHeader(d);
+  renderKPIs(d);
+  renderDailyChart(d);
+  renderWeeklyChart(d);
+  renderBillDistChart(d);
+  renderPtttChart(d);
+  renderMom(d);
+  renderVoucher(d);
+  renderDowCharts(d);
+  renderHeatmap(d);
+  renderSegCards(d);
+  renderSegTable(d);
+  renderBestSellers(d);
+  renderMenuTabs(d);
+  renderWorstSellers(d);
+  renderMenuInsights(d);
+  renderCustomerCallouts(d);
+  renderCustSegChart(d);
+  renderSpecialDay(d);
+  renderCustProfiles(d);
+  renderGrowthMatrix(d);
+  renderUpsell(d);
+  renderSimulator(d);
+  document.getElementById('footerUpdated').textContent = d.meta.updatedAt ? `Cập nhật: ${d.meta.updatedAt}` : '';
+}
+
+function destroyChart(id) { if (charts[id]) { charts[id].destroy(); delete charts[id]; } }
+const fmt = n => new Intl.NumberFormat('vi-VN').format(Math.round(n));
+
+/* ══════════════════════════════════════════════════════════
+   HEADER + KPI
+   ══════════════════════════════════════════════════════════ */
+function renderHeader(d) {
+  document.getElementById('headerSub').textContent = d.meta.dateRange || '';
+  const badges = [
+    `<div class="badge badge-amber">${d.meta.badgeLabel || ''}</div>`,
+    `<div class="badge badge-outline">${fmt(d.meta.totalBills || 0)} hóa đơn</div>`,
+    `<div class="badge badge-outline">${d.meta.numDays || ''} ngày</div>`
+  ];
+  document.getElementById('headerBadges').innerHTML = badges.join('');
+}
+
+function renderKPIs(d) {
+  const el = document.getElementById('kpiStrip');
+  el.innerHTML = (d.kpis || []).map(k => `
+    <div class="kpi ${k.color || 'ink'}">
+      <div class="kpi-label">${k.label}</div>
+      <div class="kpi-value">${k.value}</div>
+      <div class="kpi-sub">${k.sub || ''}</div>
+      ${k.delta ? `<div class="kpi-delta delta-${k.deltaType || 'neu'}">${k.delta}</div>` : ''}
+    </div>`).join('');
+}
+
+/* ══════════════════════════════════════════════════════════
+   OVERVIEW CHARTS
+   ══════════════════════════════════════════════════════════ */
+function renderDailyChart(d) {
+  destroyChart('dailyChart');
+  const daily = d.daily || [];
+  charts.dailyChart = new Chart(document.getElementById('dailyChart'), {
+    type: 'bar',
+    data: {
+      labels: daily.map(x => x.d),
+      datasets: [{
+        data: daily.map(x => x.r),
+        backgroundColor: daily.map(x => x.w === 'T7' || x.w === 'CN' ? '#C8620A' : '#1A4080'),
+        borderRadius: 3
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => fmt(c.raw) + ' đ' } } },
+      scales: {
+        x: { ticks: { font: { size: 10 } }, grid: { display: false } },
+        y: { ticks: { font: { size: 10 }, callback: v => (v/1e6).toFixed(1) + 'M' }, grid: { color: 'rgba(0,0,0,.05)' } }
+      }
+    }
+  });
+}
+
+function renderWeeklyChart(d) {
+  destroyChart('weeklyChart');
+  const w = d.weekly || {labels: [], values: []};
+  charts.weeklyChart = new Chart(document.getElementById('weeklyChart'), {
+    type: 'bar',
+    data: { labels: w.labels, datasets: [{ data: w.values, backgroundColor: '#1A4080', borderRadius: 4 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => fmt(c.raw) + ' đ' } } },
+      scales: {
+        x: { ticks: { font: { size: 9 } }, grid: { display: false } },
+        y: { ticks: { font: { size: 9 }, callback: v => (v/1e6).toFixed(0) + 'M' }, grid: { color: 'rgba(0,0,0,.05)' } }
+      }
+    }
+  });
+}
+
+function renderBillDistChart(d) {
+  destroyChart('billDistChart');
+  const bd = d.billDist || {labels: [], values: []};
+  document.getElementById('billDistDesc').textContent = d.billDistNote || 'Theo nhóm giá trị';
+  charts.billDistChart = new Chart(document.getElementById('billDistChart'), {
+    type: 'doughnut',
+    data: {
+      labels: bd.labels,
+      datasets: [{ data: bd.values, backgroundColor: ['#D4E4F7','#8CAAD4','#5080C0','#1A4080','#0D2B5C','#071831'] }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { font: { size: 9 }, boxWidth: 8 } } } }
+  });
+}
+
+function renderPtttChart(d) {
+  destroyChart('ptttChart');
+  const p = d.pttt || {labels: [], values: []};
+  charts.ptttChart = new Chart(document.getElementById('ptttChart'), {
+    type: 'pie',
+    data: {
+      labels: p.labels,
+      datasets: [{ data: p.values, backgroundColor: ['#1A4080','#C8620A','#1A6B5A','#A03040','#5080C0','#F4AA60'] }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { font: { size: 9 }, boxWidth: 8 } } } }
+  });
+}
+
+function renderMom(d) {
+  document.getElementById('momTitle').textContent = d.mom?.title || 'So sánh tháng trước';
+  const rows = d.mom?.rows || [];
+  document.getElementById('momTable').innerHTML = rows.map(r => `
+    <div class="mom-row">
+      <div class="mom-label">${r.label}</div>
+      <div class="mom-vals">
+        <div class="mom-prev">${r.prev}</div>
+        <div class="mom-curr">${r.curr}</div>
+        ${r.delta ? `<div class="mom-delta ${r.up === true ? 'delta-up' : r.up === false ? 'delta-down' : 'delta-neu'}">${r.delta}</div>` : ''}
+      </div>
+    </div>`).join('');
+}
+
+function renderVoucher(d) {
+  const v = d.voucher || {};
+  document.getElementById('voucherDesc').textContent = v.desc || '';
+  document.getElementById('voucherBars').innerHTML = (v.bars || []).map(b => `
+    <div class="voucher-bar">
+      <div class="voucher-name">${b.name}</div>
+      <div class="voucher-track"><div class="voucher-fill" style="width:${b.pct}%"></div></div>
+      <div class="voucher-cnt">${fmt(b.count)}</div>
+    </div>`).join('');
+  document.getElementById('voucherInsightBox').innerHTML = v.insightHtml ? `
+    <div style="margin-top:14px;padding:12px;background:var(--amber-pale);border-radius:8px;border-left:3px solid var(--amber)">
+      <div style="font-size:11px;font-weight:600;color:var(--amber);margin-bottom:4px">NHẬN XÉT — VOUCHER</div>
+      <div style="font-size:12px;color:var(--ink-light);line-height:1.6">${v.insightHtml}</div>
+    </div>` : '';
+}
+
+/* ══════════════════════════════════════════════════════════
+   TIME & SHIFT TAB
+   ══════════════════════════════════════════════════════════ */
+function renderDowCharts(d) {
+  destroyChart('dowRevChart'); destroyChart('dowAvgChart');
+  const rows = d.dowCA || [];
+  const labels = rows.map(r => r.d);
+  charts.dowRevChart = new Chart(document.getElementById('dowRevChart'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Ca sáng', data: rows.map(r => r.am), backgroundColor: '#1A4080', stack: 's' },
+        { label: 'Ca tối', data: rows.map(r => r.pm), backgroundColor: '#C8620A', stack: 's' }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } },
+                y: { stacked: true, ticks: { font: { size: 9 }, callback: v => (v/1e6).toFixed(0) + 'M' }, grid: { color: 'rgba(0,0,0,.05)' } } }
+    }
+  });
+  charts.dowAvgChart = new Chart(document.getElementById('dowAvgChart'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: 'TB sáng', data: rows.map(r => r.amAvg), backgroundColor: '#5080C0' },
+        { label: 'TB tối', data: rows.map(r => r.pmAvg), backgroundColor: '#F4AA60' }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+                y: { ticks: { font: { size: 9 }, callback: v => (v/1000).toFixed(0) + 'K' }, grid: { color: 'rgba(0,0,0,.05)' } } }
+    }
+  });
+}
+
+function renderHeatmap(d) {
+  const hm = d.heatmap || { hours: [], dows: [], cells: {} };
+  const hours = hm.hours || [];
+  const dows = hm.dows || ['T2','T3','T4','T5','T6','T7','CN'];
+  const maxVal = Math.max(1, ...Object.values(hm.cells || {}).flatMap(row => Object.values(row)));
+  const colHtml = `<div class="hm-col-labels">${hours.map(h => `<div class="hm-col-label">${h}h</div>`).join('')}</div>`;
+  const rowsHtml = dows.map((dname, i) => {
+    const row = (hm.cells && hm.cells[i]) || {};
+    const cells = hours.map(h => {
+      const v = row[h] || 0;
+      const ratio = v / maxVal;
+      const bg = `rgba(26,64,128,${0.12 + ratio * 0.75})`;
+      return `<div class="hm-cell" style="background:${bg}">${v || ''}</div>`;
+    }).join('');
+    return `<div class="hm-row"><div class="hm-label">${dname}</div>${cells}</div>`;
+  }).join('');
+  document.getElementById('heatmapContainer').innerHTML = `<div class="heatmap">${colHtml}${rowsHtml}</div>`;
+}
+
+function renderSegCards(d) {
+  const segs = d.segments || [];
+  document.getElementById('segCards').innerHTML = segs.map(s => `
+    <div class="seg-card" style="background:${s.bg}">
+      <div class="seg-card-label" style="background:rgba(255,255,255,.6);color:${s.tc}">${s.label}</div>
+      <div class="sc-grid">
+        <div class="sc-kpi"><div class="sc-kpi-label">Doanh thu</div><div class="sc-kpi-val">${s.revDisplay}</div></div>
+        <div class="sc-kpi"><div class="sc-kpi-label">Hóa đơn</div><div class="sc-kpi-val">${fmt(s.bills)}</div></div>
+      </div>
+      <div class="sc-note">${s.note || ''}</div>
+    </div>`).join('');
+}
+
+function renderSegTable(d) {
+  document.getElementById('segTableDesc').textContent = d.meta.badgeLabel || '';
+  const segs = d.segments || [];
+  const head = `<tr><th>Khung thời gian</th><th>Doanh thu</th><th>Hóa đơn</th><th>TB hóa đơn</th><th>Lượt khách</th><th>Chi tiêu/khách</th></tr>`;
+  const rows = segs.map(s => `<tr>
+    <td>${s.label}</td><td>${s.revDisplay}</td><td>${fmt(s.bills)}</td>
+    <td>${fmt(s.avgBill)}đ</td><td>${fmt(s.guests)}</td><td>${fmt(s.avgPerGuest)}đ</td>
+  </tr>`).join('');
+  document.getElementById('segTable').innerHTML = head + rows;
+}
+
+/* ══════════════════════════════════════════════════════════
+   MENU TAB
+   ══════════════════════════════════════════════════════════ */
+function barListHtml(items, maxVal) {
+  return items.map(it => `
+    <div class="bar-row">
+      <div class="bar-name">${it.n}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(it.r/maxVal*100).toFixed(1)}%;background:#1A4080"></div></div>
+      <div class="bar-val">${fmt(it.r)}</div>
+      <div class="bar-qty">×${it.q}</div>
+    </div>`).join('');
+}
+
+function renderBestSellers(d) {
+  const items = d.bestSellers || [];
+  document.getElementById('bestSellersDesc').textContent = d.meta.badgeLabel || '';
+  const max = Math.max(1, ...items.map(i => i.r));
+  document.getElementById('bestSellers').innerHTML = barListHtml(items, max);
+}
+
+function renderMenuTabs(d) {
+  const segMenu = d.segMenu || {};
+  const keys = Object.keys(segMenu);
+  const strip = document.getElementById('menuTabStrip');
+  strip.innerHTML = keys.map((k, i) => `<button class="tab-btn ${i===0?'active':''}" data-key="${k}" onclick="showMenuTab(this)">${k}</button>`).join('');
+  window._segMenuData = segMenu;
+  if (keys.length) renderMenuTabContent(keys[0]);
+  else document.getElementById('menuTabContent').innerHTML = '';
+}
+function showMenuTab(btn) {
+  document.querySelectorAll('#menuTabStrip .tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMenuTabContent(btn.dataset.key);
+}
+function renderMenuTabContent(key) {
+  const items = (window._segMenuData || {})[key] || [];
+  const max = Math.max(1, ...items.map(i => i.r));
+  document.getElementById('menuTabContent').innerHTML = barListHtml(items, max);
+}
+
+function renderWorstSellers(d) {
+  const items = d.worstSellers || [];
+  document.getElementById('worstSellersDesc').textContent = d.worstSellersNote || 'Các món có doanh thu thấp nhất trong tháng';
+  document.getElementById('worstSellers').innerHTML = items.map(it => `
+    <div class="worst-item"><div class="worst-name">${it.n}</div><div class="worst-val">×${it.q} · ${fmt(it.r)}đ</div></div>`).join('');
+}
+
+function renderMenuInsights(d) {
+  const items = d.menuInsights || [];
+  document.getElementById('menuInsights').innerHTML = items.map(mi => `
+    <div class="insight-card ${mi.type}">
+      <div class="insight-label">${mi.label}</div>
+      <div class="insight-title">${mi.title}</div>
+      <ul class="insight-body" style="padding-left:16px">${(mi.bullets||[]).map(b=>`<li>${b}</li>`).join('')}</ul>
+    </div>`).join('');
+}
+
+/* ══════════════════════════════════════════════════════════
+   CUSTOMER TAB
+   ══════════════════════════════════════════════════════════ */
+function renderCustomerCallouts(d) {
+  const items = d.customerCallouts || [];
+  document.getElementById('customerCallouts').innerHTML = items.map(c => `
+    <div class="callout" style="background:${c.bg || 'var(--ink)'}">
+      <div><div class="callout-label">${c.label}</div><div class="callout-val">${c.value}</div></div>
+      <div class="callout-desc">${c.desc}</div>
+    </div>`).join('');
+}
+
+function renderCustSegChart(d) {
+  destroyChart('custSegChart');
+  const segs = d.segments || [];
+  charts.custSegChart = new Chart(document.getElementById('custSegChart'), {
+    type: 'doughnut',
+    data: {
+      labels: segs.map(s => s.label),
+      datasets: [{ data: segs.map(s => s.bills), backgroundColor: segs.map(s => s.tc) }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { font: { size: 10 }, boxWidth: 8 } } } }
+  });
+}
+
+function renderSpecialDay(d) {
+  const sp = d.specialDay;
+  document.getElementById('specialDayBox').innerHTML = sp ? `
+    <div class="grid-3">
+      <div class="sc-kpi" style="background:var(--cream-dark)"><div class="sc-kpi-label">${sp.prevLabel}</div><div class="sc-kpi-val">${sp.prevVal}</div></div>
+      <div class="sc-kpi" style="background:var(--rose-pale)"><div class="sc-kpi-label">${sp.dayLabel}</div><div class="sc-kpi-val" style="color:var(--rose)">${sp.dayVal}</div></div>
+      <div class="sc-kpi" style="background:var(--cream-dark)"><div class="sc-kpi-label">Trung bình tháng</div><div class="sc-kpi-val">${sp.avgVal}</div></div>
+    </div>
+    <div class="sc-note" style="margin-top:10px">${sp.note || ''}</div>` : '<div class="sc-note">Không có ngày đặc biệt được ghi nhận tháng này.</div>';
+}
+
+function renderCustProfiles(d) {
+  const items = d.custProfiles || [];
+  document.getElementById('custProfiles').innerHTML = items.map(c => `
+    <div class="seg-card" style="background:${c.bg}">
+      <div class="seg-card-label" style="background:rgba(255,255,255,.6);color:${c.tc}">${c.icon || ''} ${c.seg}</div>
+      <ul class="insight-body" style="padding-left:16px">${(c.insights||[]).map(i=>`<li>${i}</li>`).join('')}</ul>
+    </div>`).join('');
+}
+
+/* ══════════════════════════════════════════════════════════
+   GROWTH TAB
+   ══════════════════════════════════════════════════════════ */
+function renderGrowthMatrix(d) {
+  const items = d.growthMatrix || [];
+  document.getElementById('growthMatrix').innerHTML = items.map(g => `
+    <div class="insight-card ${g.type}">
+      <div class="insight-label">${g.icon || ''} ${g.label}</div>
+      <div class="insight-title">${g.title}</div>
+      <ul class="insight-body" style="padding-left:16px">${(g.bullets||[]).map(b=>`<li>${b}</li>`).join('')}</ul>
+    </div>`).join('');
+}
+
+function renderUpsell(d) {
+  const items = d.upsell || [];
+  document.getElementById('upsellGrid').innerHTML = items.map(u => `
+    <div class="upsell-card">
+      <div class="upsell-seg-badge" style="background:${u.bg};color:${u.clr}">${u.icon || ''} ${u.seg}</div>
+      ${(u.tips||[]).map(t=>`<div class="upsell-tip" style="border-left:2px solid ${u.clr};padding-left:10px">${t}</div>`).join('')}
+    </div>`).join('');
+}
+
+function renderSimulator(d) {
+  const items = d.simulator || [];
+  document.getElementById('simulatorGrid').innerHTML = items.map(s => `
+    <div class="sim-card">
+      <div class="sim-label">${s.label}</div>
+      <div class="sim-val">+${s.value}</div>
+      <div class="sim-desc">${s.desc}</div>
+    </div>`).join('');
+}
+
+/* ══════════════════════════════════════════════════════════ */
+init();
+</script>
+</body>
+</html>
