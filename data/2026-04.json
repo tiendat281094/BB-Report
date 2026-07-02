@@ -9,9 +9,9 @@
   "kpis": [
     {
       "label": "Tổng doanh thu",
-      "value": "953.9M",
-      "sub": "953,904,000 đ",
-      "delta": "↓ 5.6% vs T3",
+      "value": "1007.3M",
+      "sub": "1,007,305,400 đ",
+      "delta": "↓ 5.8% vs T3",
       "deltaType": "down",
       "color": "amber"
     },
@@ -25,9 +25,9 @@
     },
     {
       "label": "Avg bill",
-      "value": "762K",
+      "value": "805K",
       "sub": "trung bình/bàn",
-      "delta": "↑ 5K vs T3 (757K)",
+      "delta": "↑ 48K vs T3 (757K)",
       "deltaType": "up",
       "color": "rose"
     },
@@ -41,9 +41,9 @@
     },
     {
       "label": "Chi tiêu / khách",
-      "value": "328K",
+      "value": "346K",
       "sub": "avg spend/người",
-      "delta": "↑ 3K vs T3 (325K)",
+      "delta": "↑ 21K vs T3 (325K)",
       "deltaType": "up",
       "color": "ink"
     },
@@ -263,8 +263,8 @@
       {
         "label": "Tổng doanh thu",
         "prev": "1,010M",
-        "curr": "953.9M",
-        "delta": "-5.6%",
+        "curr": "1007.3M",
+        "delta": "-5.8%",
         "up": false
       },
       {
@@ -277,8 +277,8 @@
       {
         "label": "Avg bill",
         "prev": "757K",
-        "curr": "762K",
-        "delta": "+5K",
+        "curr": "805K",
+        "delta": "+48K",
         "up": true
       },
       {
@@ -291,8 +291,8 @@
       {
         "label": "Chi tiêu / khách",
         "prev": "325K",
-        "curr": "328K",
-        "delta": "+3K",
+        "curr": "346K",
+        "delta": "+21K",
         "up": true
       },
       {

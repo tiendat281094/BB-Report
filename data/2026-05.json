@@ -9,9 +9,9 @@
   "kpis": [
     {
       "label": "Tổng doanh thu",
-      "value": "906.4M",
-      "sub": "906,409,000 đ",
-      "delta": "↓ 5.0% so với T4",
+      "value": "958.3M",
+      "sub": "958,321,600 đ",
+      "delta": "↓ 4.8% so với T4",
       "deltaType": "down",
       "color": "amber"
     },
@@ -25,9 +25,9 @@
     },
     {
       "label": "Trung bình hóa đơn",
-      "value": "742K",
+      "value": "784K",
       "sub": "trung bình/bàn",
-      "delta": "↓ 20K so với T4 (762K)",
+      "delta": "↓ 20K so với T4 (805K)",
       "deltaType": "down",
       "color": "rose"
     },
@@ -41,9 +41,9 @@
     },
     {
       "label": "Chi tiêu / khách",
-      "value": "323K",
+      "value": "342K",
       "sub": "chi tiêu bình quân/người",
-      "delta": "↓ 5K so với T4 (328K)",
+      "delta": "↓ 5K so với T4 (346K)",
       "deltaType": "down",
       "color": "ink"
     },
@@ -267,9 +267,9 @@
     "rows": [
       {
         "label": "Tổng doanh thu",
-        "prev": "953.9M",
-        "curr": "906.4M",
-        "delta": "-5.0%",
+        "prev": "1007.3M",
+        "curr": "958.3M",
+        "delta": "-4.8%",
         "up": false
       },
       {
@@ -281,8 +281,8 @@
       },
       {
         "label": "Trung bình hóa đơn",
-        "prev": "762K",
-        "curr": "742K",
+        "prev": "805K",
+        "curr": "784K",
         "delta": "-20K",
         "up": false
       },
@@ -295,8 +295,8 @@
       },
       {
         "label": "Chi tiêu / khách",
-        "prev": "328K",
-        "curr": "323K",
+        "prev": "346K",
+        "curr": "342K",
         "delta": "-5K",
         "up": false
       },
