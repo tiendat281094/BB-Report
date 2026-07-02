@@ -1,7 +1,7 @@
 # BEPBO Sales Dashboard
 
 Live, static dashboard for BEPBO (Quán Bò Xèo) monthly sales. Hosted on GitHub
-Pages at **report.somtamzaap.vn**.
+Pages at **bbreport.somtamzaap.vn**.
 
 - `index.html` — fixed dashboard shell (layout, tabs, charts, CSS/JS). Built
   once; do not edit per month.
@@ -43,11 +43,11 @@ only changes if the dashboard's layout/charts/design system changes.
 
 At your domain registrar for `somtamzaap.vn`, add:
 
-| Type  | Name     | Value                     |
-|-------|----------|---------------------------|
-| CNAME | `report` | `tiendat281094.github.io` |
+| Type  | Name       | Value                     |
+|-------|------------|---------------------------|
+| CNAME | `bbreport` | `tiendat281094.github.io` |
 
 GitHub Pages reads the `CNAME` file committed in this repo
-(`report.somtamzaap.vn`) to know which custom domain to serve. Once the DNS
+(`bbreport.somtamzaap.vn`) to know which custom domain to serve. Once the DNS
 record propagates, GitHub auto-provisions HTTPS for the domain (can take up
 to ~24h, usually much faster).
