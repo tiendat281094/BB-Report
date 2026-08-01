@@ -1,0 +1,1086 @@
+{
+  "meta": {
+    "dateRange": "01/07/2026 → 31/07/2026 · Dữ liệu hóa đơn chi tiết",
+    "badgeLabel": "THÁNG 7 · 2026",
+    "totalBills": 1278,
+    "numDays": 31,
+    "updatedAt": ""
+  },
+  "kpis": [
+    {
+      "label": "Tổng doanh thu",
+      "value": "1.10 tỷ",
+      "sub": "1,099,183,635 đ",
+      "delta": "↑ 14.5% so với T6",
+      "deltaType": "up",
+      "color": "amber"
+    },
+    {
+      "label": "Số hóa đơn",
+      "value": "1,278",
+      "sub": "~41.2 hóa đơn/ngày",
+      "delta": "↑ 111 so với T6",
+      "deltaType": "up",
+      "color": "teal"
+    },
+    {
+      "label": "Trung bình hóa đơn",
+      "value": "860K",
+      "sub": "trung bình/bàn",
+      "delta": "↑ 37K so với T6 (823K)",
+      "deltaType": "up",
+      "color": "rose"
+    },
+    {
+      "label": "Lượt khách",
+      "value": "3,010",
+      "sub": "TB 2.36 khách/bàn",
+      "delta": "↑ 195 so với T6",
+      "deltaType": "up",
+      "color": "blue"
+    },
+    {
+      "label": "Chi tiêu / khách",
+      "value": "365K",
+      "sub": "chi tiêu bình quân/người",
+      "delta": "↑ 24K so với T6 (341K)",
+      "deltaType": "up",
+      "color": "ink"
+    },
+    {
+      "label": "Tỷ lệ dùng Voucher",
+      "value": "44.1%",
+      "sub": "564 lượt · 1,278 hóa đơn",
+      "delta": "↑ 3.4 đpt so với T6 (40.7%)",
+      "deltaType": "up",
+      "color": "amber"
+    }
+  ],
+  "daily": [
+    {
+      "d": "01/07",
+      "w": "T4",
+      "r": 34784700
+    },
+    {
+      "d": "02/07",
+      "w": "T5",
+      "r": 24829500
+    },
+    {
+      "d": "03/07",
+      "w": "T6",
+      "r": 56497800
+    },
+    {
+      "d": "04/07",
+      "w": "T7",
+      "r": 45298640
+    },
+    {
+      "d": "05/07",
+      "w": "CN",
+      "r": 42316200
+    },
+    {
+      "d": "06/07",
+      "w": "T2",
+      "r": 28262520
+    },
+    {
+      "d": "07/07",
+      "w": "T3",
+      "r": 29302000
+    },
+    {
+      "d": "08/07",
+      "w": "T4",
+      "r": 25146400
+    },
+    {
+      "d": "09/07",
+      "w": "T5",
+      "r": 44926340
+    },
+    {
+      "d": "10/07",
+      "w": "T6",
+      "r": 46570200
+    },
+    {
+      "d": "11/07",
+      "w": "T7",
+      "r": 53469940
+    },
+    {
+      "d": "12/07",
+      "w": "CN",
+      "r": 47067920
+    },
+    {
+      "d": "13/07",
+      "w": "T2",
+      "r": 29502900
+    },
+    {
+      "d": "14/07",
+      "w": "T3",
+      "r": 30924700
+    },
+    {
+      "d": "15/07",
+      "w": "T4",
+      "r": 35373500
+    },
+    {
+      "d": "16/07",
+      "w": "T5",
+      "r": 37705670
+    },
+    {
+      "d": "17/07",
+      "w": "T6",
+      "r": 46223170
+    },
+    {
+      "d": "18/07",
+      "w": "T7",
+      "r": 41896200
+    },
+    {
+      "d": "19/07",
+      "w": "CN",
+      "r": 44839000
+    },
+    {
+      "d": "20/07",
+      "w": "T2",
+      "r": 29497540
+    },
+    {
+      "d": "21/07",
+      "w": "T3",
+      "r": 23526500
+    },
+    {
+      "d": "22/07",
+      "w": "T4",
+      "r": 32101980
+    },
+    {
+      "d": "23/07",
+      "w": "T5",
+      "r": 27212600
+    },
+    {
+      "d": "24/07",
+      "w": "T6",
+      "r": 42896400
+    },
+    {
+      "d": "25/07",
+      "w": "T7",
+      "r": 43690300
+    },
+    {
+      "d": "26/07",
+      "w": "CN",
+      "r": 32130855
+    },
+    {
+      "d": "27/07",
+      "w": "T2",
+      "r": 19216060
+    },
+    {
+      "d": "28/07",
+      "w": "T3",
+      "r": 20547600
+    },
+    {
+      "d": "29/07",
+      "w": "T4",
+      "r": 11624900
+    },
+    {
+      "d": "30/07",
+      "w": "T5",
+      "r": 32667200
+    },
+    {
+      "d": "31/07",
+      "w": "T6",
+      "r": 39134400
+    }
+  ],
+  "weekly": {
+    "labels": [
+      "Tuần 27\n(01-05/07)",
+      "Tuần 28\n(06-12/07)",
+      "Tuần 29\n(13-19/07)",
+      "Tuần 30\n(20-26/07)",
+      "Tuần 31\n(27-31/07)"
+    ],
+    "values": [
+      204000000,
+      275000000,
+      266000000,
+      231000000,
+      123000000
+    ]
+  },
+  "billDist": {
+    "labels": [
+      "<300k",
+      "300–500k",
+      "500–800k",
+      "800k–1.2M",
+      "1.2–2M",
+      ">2M"
+    ],
+    "values": [
+      146,
+      165,
+      328,
+      378,
+      195,
+      48
+    ]
+  },
+  "billDistNote": "",
+  "pttt": {
+    "labels": [
+      "Chuyển khoản",
+      "Thẻ/ATM",
+      "Tiền mặt",
+      "GR-PAY (Grab)"
+    ],
+    "values": [
+      38.5,
+      37,
+      13.9,
+      10.6
+    ]
+  },
+  "mom": {
+    "title": "So sánh tháng 6 và tháng 7",
+    "rows": [
+      {
+        "label": "Tổng doanh thu",
+        "prev": "960.0M",
+        "curr": "1.10 tỷ",
+        "delta": "+14.5%",
+        "up": true
+      },
+      {
+        "label": "Số hóa đơn",
+        "prev": "1,167",
+        "curr": "1,278",
+        "delta": "+111",
+        "up": true
+      },
+      {
+        "label": "Trung bình hóa đơn",
+        "prev": "823K",
+        "curr": "860K",
+        "delta": "+37K",
+        "up": true
+      },
+      {
+        "label": "Lượt khách",
+        "prev": "2,815",
+        "curr": "3,010",
+        "delta": "+195",
+        "up": true
+      },
+      {
+        "label": "Chi tiêu / khách",
+        "prev": "341K",
+        "curr": "365K",
+        "delta": "+24K",
+        "up": true
+      },
+      {
+        "label": "Hóa đơn/ngày trung bình",
+        "prev": "38.9",
+        "curr": "41.2",
+        "delta": "+2.3",
+        "up": true
+      },
+      {
+        "label": "Tối trong tuần",
+        "prev": "389.2M",
+        "curr": "513.6M",
+        "delta": "+124.3M",
+        "up": true
+      },
+      {
+        "label": "Sáng cuối tuần",
+        "prev": "101.7M",
+        "curr": "97.9M",
+        "delta": "-3.8M",
+        "up": false
+      },
+      {
+        "label": "Món bán chạy #1",
+        "prev": "Crab Pasta 72.45M",
+        "curr": "Crab Pasta 79.8M",
+        "delta": "",
+        "up": null
+      }
+    ]
+  },
+  "voucher": {
+    "desc": "564 lượt · 44.1% hóa đơn có voucher — cao nhất từ trước đến nay",
+    "bars": [
+      {
+        "name": "VÉ XE 15K",
+        "count": 477,
+        "pct": 100.0
+      },
+      {
+        "name": "VÉ XE 30K",
+        "count": 71,
+        "pct": 14.9
+      },
+      {
+        "name": "VÉ XE 45K",
+        "count": 16,
+        "pct": 3.4
+      }
+    ],
+    "insightHtml": "Tỷ lệ dùng voucher tiếp tục tăng tháng thứ 2 liên tiếp (38.5% → 40.7% → 44.1%) — xu hướng khách đến bằng xe cá nhân ngày càng rõ.\n          VÉ XE 30K chiếm 12.6% lượt dùng, VÉ 45K xuất hiện 16 lần — nhóm khách chi tiêu cao đang dùng vé giá trị lớn hơn, đúng như dự đoán từ tháng trước."
+  },
+  "dowCA": [
+    {
+      "d": "T2",
+      "am": 30512120,
+      "pm": 75966900,
+      "amAvg": 709584,
+      "pmAvg": 883336
+    },
+    {
+      "d": "T3",
+      "am": 35320000,
+      "pm": 68980800,
+      "amAvg": 821395,
+      "pmAvg": 821200
+    },
+    {
+      "d": "T4",
+      "am": 35336700,
+      "pm": 103694780,
+      "amAvg": 736181,
+      "pmAvg": 951328
+    },
+    {
+      "d": "T5",
+      "am": 59115000,
+      "pm": 108226310,
+      "amAvg": 809795,
+      "pmAvg": 894432
+    },
+    {
+      "d": "T6",
+      "am": 74632770,
+      "pm": 156689200,
+      "amAvg": 793966,
+      "pmAvg": 932674
+    },
+    {
+      "d": "T7",
+      "am": 50803400,
+      "pm": 133551680,
+      "amAvg": 769748,
+      "pmAvg": 902376
+    },
+    {
+      "d": "CN",
+      "am": 47058520,
+      "pm": 119295455,
+      "amAvg": 840331,
+      "pmAvg": 858241
+    }
+  ],
+  "heatmap": {
+    "hours": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "dows": [
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T6",
+      "T7",
+      "CN"
+    ],
+    "cells": {
+      "0": {
+        "11": 11,
+        "12": 25,
+        "13": 5,
+        "15": 4,
+        "17": 4,
+        "18": 26,
+        "19": 20,
+        "20": 20,
+        "21": 11
+      },
+      "1": {
+        "11": 16,
+        "12": 19,
+        "13": 6,
+        "16": 7,
+        "17": 3,
+        "18": 32,
+        "19": 24,
+        "20": 14,
+        "21": 3
+      },
+      "2": {
+        "11": 19,
+        "12": 23,
+        "13": 3,
+        "14": 3,
+        "15": 4,
+        "16": 3,
+        "17": 9,
+        "18": 25,
+        "19": 38,
+        "20": 21,
+        "21": 7
+      },
+      "3": {
+        "11": 22,
+        "12": 38,
+        "13": 5,
+        "14": 6,
+        "15": 3,
+        "16": 5,
+        "17": 11,
+        "18": 31,
+        "19": 42,
+        "20": 20,
+        "21": 9
+      },
+      "4": {
+        "10": 3,
+        "11": 27,
+        "12": 44,
+        "13": 13,
+        "14": 7,
+        "15": 5,
+        "16": 9,
+        "17": 9,
+        "18": 45,
+        "19": 49,
+        "20": 34,
+        "21": 15
+      },
+      "5": {
+        "11": 14,
+        "12": 22,
+        "13": 19,
+        "14": 11,
+        "15": 5,
+        "16": 3,
+        "17": 15,
+        "18": 33,
+        "19": 41,
+        "20": 41,
+        "21": 9
+      },
+      "6": {
+        "11": 11,
+        "12": 26,
+        "13": 12,
+        "14": 7,
+        "17": 19,
+        "18": 36,
+        "19": 45,
+        "20": 29,
+        "21": 5
+      }
+    }
+  },
+  "segments": [
+    {
+      "label": "Sáng trong tuần",
+      "bg": "#EAF0FF",
+      "tc": "#1A4080",
+      "revDisplay": "234.9M",
+      "bills": 301,
+      "guests": 768,
+      "avgBill": 780454,
+      "avgPerGuest": 305881,
+      "note": "Tăng trưởng vững: +4.1% so T6 (234.9M vs 225.6M). SET LUNCH 2 vượt SET LUNCH 3 lần đầu."
+    },
+    {
+      "label": "Sáng cuối tuần",
+      "bg": "#E0F5EF",
+      "tc": "#1A6B5A",
+      "revDisplay": "97.9M",
+      "bills": 122,
+      "guests": 276,
+      "avgBill": 802147,
+      "avgPerGuest": 354572,
+      "note": "Duy nhất khung giảm nhẹ: -3.7% so T6 (97.9M vs 101.7M). Cần theo dõi sau 2 tháng tăng liên tiếp."
+    },
+    {
+      "label": "Tối trong tuần",
+      "bg": "#FDF0E0",
+      "tc": "#C8620A",
+      "revDisplay": "513.6M",
+      "bills": 568,
+      "guests": 1309,
+      "avgBill": 904151,
+      "avgPerGuest": 392328,
+      "note": "Bùng nổ mạnh nhất: +31.9% so T6 (513.6M vs 389.2M). Ca tối T4-T5-T6 là động lực chính."
+    },
+    {
+      "label": "Tối cuối tuần",
+      "bg": "#FAEAEC",
+      "tc": "#A03040",
+      "revDisplay": "252.8M",
+      "bills": 287,
+      "guests": 657,
+      "avgBill": 881000,
+      "avgPerGuest": 384851,
+      "note": "Tăng trưởng ổn định: +3.8% so T6 (252.8M vs 243.5M). Không đột biến nhưng bền vững."
+    }
+  ],
+  "bestSellers": [
+    {
+      "n": "Cà Mau Crab Pasta/ Mỳ Ý Cua Cà Mau",
+      "q": 228,
+      "r": 79800000
+    },
+    {
+      "n": "BEPBO Signature Beef Tagliatelle/ Mì Bò Sate",
+      "q": 490,
+      "r": 73500000
+    },
+    {
+      "n": "BEPBO Bò Xèo",
+      "q": 398,
+      "r": 59700000
+    },
+    {
+      "n": "Thăn Ngoại (Striploin) Aukobee 300gr",
+      "q": 115,
+      "r": 54110000
+    },
+    {
+      "n": "Thăn Ngoại (Striploin) Aukobee 200gr",
+      "q": 141,
+      "r": 48815000
+    },
+    {
+      "n": "Fuji Steak 200gr",
+      "q": 105,
+      "r": 46515000
+    },
+    {
+      "n": "Tacos Set/Tacos 3 vị",
+      "q": 213,
+      "r": 38340000
+    },
+    {
+      "n": "Lõi Vai (Top Blade) Aukobee 200gr",
+      "q": 117,
+      "r": 37440000
+    },
+    {
+      "n": "Pan-Fried Prawn Salad/Salad Tôm",
+      "q": 234,
+      "r": 29250000
+    },
+    {
+      "n": "Lõi Vai (Top Blade) Aukobee 300gr",
+      "q": 63,
+      "r": 27090000
+    },
+    {
+      "n": "Thăn Ngoại (Striploin) Nhật 200gr",
+      "q": 70,
+      "r": 25755000
+    },
+    {
+      "n": "Seafood Rigatoni Tom Yum",
+      "q": 101,
+      "r": 24240000
+    },
+    {
+      "n": "Cured Salmon/Cá Hồi Muối Xốt Bơ",
+      "q": 117,
+      "r": 21060000
+    },
+    {
+      "n": "SET LUNCH 2",
+      "q": 94,
+      "r": 20500000
+    },
+    {
+      "n": "Mỳ Gà Xốt Kem Chanh (Beurre Blanc)",
+      "q": 108,
+      "r": 19980000
+    }
+  ],
+  "worstSellersNote": "",
+  "worstSellers": [
+    {
+      "n": "333 Beer",
+      "q": 9,
+      "r": 405000
+    },
+    {
+      "n": "Cheese Sauce/Xốt Phô Mai",
+      "q": 10,
+      "r": 400000
+    },
+    {
+      "n": "Extra Pasta",
+      "q": 8,
+      "r": 400000
+    },
+    {
+      "n": "Saigon Special Beer",
+      "q": 8,
+      "r": 384000
+    },
+    {
+      "n": "De Bortoli Vivo Shiraz",
+      "q": 2,
+      "r": 320000
+    },
+    {
+      "n": "Deakin Estate Shiraz Viognier",
+      "q": 2,
+      "r": 300000
+    },
+    {
+      "n": "Phí Charge",
+      "q": 1,
+      "r": 200000
+    },
+    {
+      "n": "De Bortoli Cabernet Sauvignon",
+      "q": 1,
+      "r": 180000
+    },
+    {
+      "n": "Red Wine Sauce/Xốt Vang Đỏ",
+      "q": 5,
+      "r": 175000
+    },
+    {
+      "n": "Chermoula Sauce/Xốt Chermoula",
+      "q": 3,
+      "r": 120000
+    }
+  ],
+  "segMenu": {
+    "Sáng trong tuần": [
+      {
+        "n": "BEPBO Bò Xèo",
+        "q": 139,
+        "r": 20850000
+      },
+      {
+        "n": "SET LUNCH 2",
+        "q": 94,
+        "r": 20500000
+      },
+      {
+        "n": "SET LUNCH 3",
+        "q": 63,
+        "r": 13860000
+      },
+      {
+        "n": "Cà Mau Crab Pasta",
+        "q": 32,
+        "r": 11200000
+      },
+      {
+        "n": "BEPBO Signature Beef Tagliatelle",
+        "q": 71,
+        "r": 10650000
+      },
+      {
+        "n": "Thăn Ngoại Aukobee 300gr",
+        "q": 20,
+        "r": 9235000
+      },
+      {
+        "n": "Thăn Ngoại Aukobee 200gr",
+        "q": 26,
+        "r": 9100000
+      },
+      {
+        "n": "Lõi Vai Aukobee 200gr",
+        "q": 23,
+        "r": 7360000
+      }
+    ],
+    "Sáng cuối tuần": [
+      {
+        "n": "BEPBO Signature Beef Tagliatelle",
+        "q": 55,
+        "r": 8250000
+      },
+      {
+        "n": "Cà Mau Crab Pasta",
+        "q": 20,
+        "r": 7000000
+      },
+      {
+        "n": "BEPBO Bò Xèo",
+        "q": 40,
+        "r": 6000000
+      },
+      {
+        "n": "Thăn Ngoại Aukobee 200gr",
+        "q": 15,
+        "r": 5250000
+      },
+      {
+        "n": "Tacos Set/Tacos 3 vị",
+        "q": 23,
+        "r": 4140000
+      },
+      {
+        "n": "Thăn Ngoại Aukobee 300gr",
+        "q": 9,
+        "r": 3960000
+      },
+      {
+        "n": "Lõi Vai Aukobee 300gr",
+        "q": 9,
+        "r": 3870000
+      },
+      {
+        "n": "Thăn Nội Úc 300gr",
+        "q": 6,
+        "r": 3300000
+      }
+    ],
+    "Tối trong tuần": [
+      {
+        "n": "Cà Mau Crab Pasta",
+        "q": 118,
+        "r": 41300000
+      },
+      {
+        "n": "BEPBO Signature Beef Tagliatelle",
+        "q": 241,
+        "r": 36150000
+      },
+      {
+        "n": "Thăn Ngoại Aukobee 300gr",
+        "q": 64,
+        "r": 30720000
+      },
+      {
+        "n": "Fuji Steak 200gr",
+        "q": 63,
+        "r": 28350000
+      },
+      {
+        "n": "BEPBO Bò Xèo",
+        "q": 159,
+        "r": 23850000
+      },
+      {
+        "n": "Thăn Ngoại Aukobee 200gr",
+        "q": 60,
+        "r": 20735000
+      },
+      {
+        "n": "Tacos Set/Tacos 3 vị",
+        "q": 102,
+        "r": 18360000
+      },
+      {
+        "n": "Lõi Vai Aukobee 200gr",
+        "q": 50,
+        "r": 16000000
+      }
+    ],
+    "Tối cuối tuần": [
+      {
+        "n": "Cà Mau Crab Pasta",
+        "q": 58,
+        "r": 20300000
+      },
+      {
+        "n": "BEPBO Signature Beef Tagliatelle",
+        "q": 123,
+        "r": 18450000
+      },
+      {
+        "n": "Thăn Ngoại Aukobee 200gr",
+        "q": 40,
+        "r": 13730000
+      },
+      {
+        "n": "Lõi Vai Aukobee 200gr",
+        "q": 38,
+        "r": 12160000
+      },
+      {
+        "n": "Thăn Ngoại Aukobee 300gr",
+        "q": 22,
+        "r": 10195000
+      },
+      {
+        "n": "Tacos Set/Tacos 3 vị",
+        "q": 54,
+        "r": 9720000
+      },
+      {
+        "n": "Fuji Steak 200gr",
+        "q": 21,
+        "r": 9450000
+      },
+      {
+        "n": "BEPBO Bò Xèo",
+        "q": 60,
+        "r": 9000000
+      }
+    ]
+  },
+  "menuInsights": [
+    {
+      "type": "amber",
+      "label": "PHÂN TÍCH THỰC ĐƠN",
+      "title": "Crab Pasta trở lại dẫn đầu rõ rệt — thứ hạng top 3 xáo trộn",
+      "bullets": [
+        "Crab Pasta 79.8M · Beef Tagliatelle 73.5M · Bò Xèo 59.7M — lần đầu tiên Bò Xèo tụt xuống #3 sau nhiều tháng giữ #1-#2",
+        "Fuji Steak 200gr tăng vọt lên #6 (105 lần, 46.5M) — cao nhất từ trước đến nay, đà tăng liên tục qua các tháng",
+        "Seafood Rigatoni Tom Yum vào top 12 (101 lần, 24.2M) — món mới tiếp tục được đón nhận tốt, tăng đều đặn",
+        "SET LUNCH 2 (94 lần) vượt SET LUNCH 3 lần đầu tiên — có thể do combo giá tốt hơn đang hút khách nhạy giá"
+      ]
+    },
+    {
+      "type": "rose",
+      "label": "CẢNH BÁO THỰC ĐƠN",
+      "title": "Rượu vang lẻ chai bán rất chậm — cần rà soát danh mục",
+      "bullets": [
+        "4 loại rượu vang (De Bortoli ×2, Deakin Estate ×2) tổng cộng chỉ 6 lần gọi/tháng, doanh thu 950K — quá nhiều SKU cho nhu cầu thực tế",
+        "Bia chai (333, Saigon Special) tổng 17 lần — vẫn thấp dù đã cảnh báo từ tháng 5, cân nhắc bỏ hẳn",
+        "\"Phí Charge\" xuất hiện như 1 dòng sản phẩm (200K, 1 lần) — có thể là lỗi nhập liệu POS, nên rà soát lại quy trình nhập order",
+        "Extra Pasta (8 lần) và Cheese Sauce (10 lần) — thấp, nên xem xét gộp vào set hoặc bỏ tùy chọn riêng lẻ"
+      ]
+    }
+  ],
+  "customerCallouts": [
+    {
+      "label": "Tăng trưởng mạnh nhất 4 tháng",
+      "value": "+14.5%",
+      "bg": "var(--ink)",
+      "desc": "Doanh thu tháng 7 đạt 1.10 tỷ — mức tăng trưởng MoM cao nhất kể từ T3/2026, đảo ngược hoàn toàn xu hướng giảm trước đó."
+    },
+    {
+      "label": "Ca tối T4-T5-T6 bùng nổ",
+      "value": "98.2%",
+      "bg": "var(--teal)",
+      "desc": "Riêng 3 ca tối giữa tuần (T4,T5,T6 PM) đóng góp 98.2% tổng tăng trưởng doanh thu tháng — +136.7M chỉ từ 3 khung giờ này."
+    },
+    {
+      "label": "13/07 — Bàn tiệc lớn",
+      "value": "10.2M",
+      "bg": "var(--rose)",
+      "desc": "Một bàn 23 khách chi 10,166,800đ trong ngày 13/07 — khiến TB hóa đơn ngày này (1,134,727đ) cao nhất tháng dù chỉ 26 bàn."
+    },
+    {
+      "label": "Sáng cuối tuần — Chững lại",
+      "value": "-3.7%",
+      "bg": "var(--blue)",
+      "desc": "Duy nhất khung giảm nhẹ: 101.7M (T6) → 97.9M (T7). Sau 2 tháng tăng liên tiếp, cần theo dõi có phải seasonal không."
+    }
+  ],
+  "specialDay": null,
+  "custProfiles": [
+    {
+      "seg": "Sáng trong tuần",
+      "bg": "#EAF0FF",
+      "tc": "#1A4080",
+      "icon": "☕",
+      "insights": [
+        "Tăng trưởng vững chắc: +4.1% so T6 (234.9M) — mức tăng ổn định, không đột biến",
+        "SET LUNCH 2 (94 lần) vượt SET LUNCH 3 (63 lần) lần đầu tiên — khách có xu hướng chọn combo giá vừa phải hơn",
+        "TB hóa đơn 780K, tăng đáng kể so T6 (718K) — chất lượng khách cải thiện cùng lúc với traffic",
+        "Bò Xèo vẫn dẫn đầu sáng thường (139 lần) nhưng khoảng cách với SET LUNCH 2 đang thu hẹp",
+        "Cơ hội: Định vị lại SET LUNCH 2 làm \"combo tiêu chuẩn\", tối ưu marketing theo hướng giá trị"
+      ]
+    },
+    {
+      "seg": "Sáng cuối tuần",
+      "bg": "#E0F5EF",
+      "tc": "#1A6B5A",
+      "icon": "🌿",
+      "insights": [
+        "Duy nhất khung giảm: -3.7% so T6 (97.9M vs 101.7M) — đứt mạch tăng trưởng 2 tháng liên tiếp",
+        "TB hóa đơn 802K vẫn cao, chi tiêu/khách 355K — chất lượng khách không đổi, chỉ traffic giảm nhẹ",
+        "Beef Tagliatelle vượt lên top 1 sáng cuối tuần — thay đổi khẩu vị nhẹ so với Bò Xèo trước đây",
+        "Cần xác định nguyên nhân: thời tiết mùa hè, cạnh tranh mới, hay đơn thuần là biến động tự nhiên",
+        "Cơ hội: Refresh gói brunch, thêm ưu đãi nhỏ (mocktail miễn phí) để giữ đà trước khi thành xu hướng"
+      ]
+    },
+    {
+      "seg": "Tối trong tuần",
+      "bg": "#FDF0E0",
+      "tc": "#C8620A",
+      "icon": "🍽️",
+      "insights": [
+        "Bùng nổ mạnh nhất tháng: +31.9% so T6 (513.6M) — động lực chính của toàn bộ tăng trưởng",
+        "Cả T4, T5, T6 (PM) đều tăng đồng loạt &gt;35% cả về bills lẫn doanh thu — tăng trưởng thực chất",
+        "Crab Pasta trở lại #1 rõ rệt (118 lần tối thường) — Fuji Steak cũng bứt phá mạnh (63 lần, hạng 4)",
+        "T2/T3 tối gần như đi ngang trong khi T4-T6 bùng nổ — tăng trưởng có chọn lọc theo ngày cụ thể",
+        "Cơ hội: Điều tra nguyên nhân T4-T6 tăng để nhân rộng, đồng thời kích hoạt riêng cho T2/T3"
+      ]
+    },
+    {
+      "seg": "Tối cuối tuần",
+      "bg": "#FAEAEC",
+      "tc": "#A03040",
+      "icon": "✨",
+      "insights": [
+        "Tăng trưởng ổn định: +3.8% so T6 (252.8M) — không đột biến nhưng liên tục cải thiện",
+        "TB hóa đơn cao nhất 881K, chi tiêu/khách 385K — vẫn là nhóm khách chi tiêu cao nhất",
+        "Crab Pasta + Beef Tagliatelle tiếp tục thống trị — khẩu vị khách cuối tuần ổn định qua các tháng",
+        "T7 tối (133.6M) vượt CN tối (119.3M) — pattern quen thuộc, T7 luôn mạnh hơn CN",
+        "Cơ hội: Duy trì momentum bằng wine pairing và premium cuts, không cần thay đổi lớn"
+      ]
+    }
+  ],
+  "growthMatrix": [
+    {
+      "type": "teal",
+      "icon": "🚀",
+      "label": "Làm Ngay — Tác động cao, Dễ thực hiện",
+      "title": "Triển khai trong tháng 8",
+      "bullets": [
+        "Nhân rộng đà tăng T4-T5-T6 tối:Xác định nguyên nhân cụ thể (marketing? thời tiết mát hơn? review tốt?) để duy trì và mở rộng sang T2/T3 tối đang đi ngang",
+        "Chuẩn bị công suất cho ca tối cao điểm:T6 19h đang là giờ cao điểm tuyệt đối — đảm bảo đủ nhân sự bếp/phục vụ để không mất khách vì chờ lâu",
+        "Khai thác nhóm khách tiệc lớn (như 13/07):Tạo gói \"đặt bàn nhóm 15+\" với ưu đãi riêng để chủ động thu hút thêm các booking tương tự",
+        "Đẩy SET LUNCH 2 làm chủ lực:Đã vượt SET LUNCH 3 — điều chỉnh định vị marketing SET LUNCH 2 làm lựa chọn \"best value\" chính"
+      ]
+    },
+    {
+      "type": "amber",
+      "icon": "📈",
+      "label": "Đặt Cược Tăng Trưởng — Cần đầu tư",
+      "title": "Kế hoạch cho tháng 8-9",
+      "bullets": [
+        "Phục hồi sáng cuối tuần:Duy nhất khung giảm (-3.7%) sau 2 tháng tăng — cần campaign brunch mới để giữ đà trước khi thành xu hướng giảm",
+        "Đẩy Fuji Steak thành hero chính thức:Tăng liên tục 3 tháng, giờ đã top 6 — đủ dữ liệu để đầu tư marketing riêng cho món này",
+        "Chuyển khoản #1 lần đầu:38.5% vượt Thẻ/ATM — xem xét tối ưu quy trình xác nhận chuyển khoản nhanh hơn để giảm thời gian chờ thanh toán",
+        "Rà soát lại T2/T3 tối:Đi ngang trong khi các ngày khác tăng mạnh — cần chương trình riêng (happy hour, giảm giá nhóm nhỏ) để không bị bỏ lại phía sau"
+      ]
+    },
+    {
+      "type": "blue",
+      "icon": "🔧",
+      "label": "Chỉnh Sửa — Tác động nhỏ, Dễ làm",
+      "title": "Xử lý ngay",
+      "bullets": [
+        "Rà soát dòng \"Phí Charge\":Xuất hiện như sản phẩm trong báo cáo — kiểm tra quy trình POS, có thể là lỗi nhập liệu cần training lại nhân viên",
+        "Thu gọn danh mục rượu vang lẻ:4 loại chỉ 6 lần gọi/tháng — giữ 1-2 loại bán chạy nhất, bỏ phần còn lại hoặc chỉ bán theo yêu cầu đặc biệt",
+        "Bỏ hẳn bia chai:Đã cảnh báo từ T5, vẫn thấp (17 lần) — quyết định dứt khoát bỏ khỏi menu, chỉ giữ Rooster Blonde draft",
+        "Gộp Extra Pasta vào set có sẵn:8 lần/tháng quá thấp cho 1 lựa chọn riêng — tích hợp vào combo thay vì standalone"
+      ]
+    },
+    {
+      "type": "rose",
+      "icon": "⚠️",
+      "label": "Theo Dõi — Quan sát trước khi hành động",
+      "title": "Quan sát trong tháng 8",
+      "bullets": [
+        "Tăng trưởng có bền vững không:+14.5% là mức tăng ấn tượng nhưng 1 tháng chưa đủ xác nhận xu hướng — cần T8 để biết đây là bùng nổ tạm thời hay chuyển dịch dài hạn",
+        "Phụ thuộc vào 3 ngày cụ thể:98.2% tăng trưởng đến từ T4-T5-T6 tối — rủi ro nếu momentum này giảm, cần đa dạng hóa nguồn tăng trưởng sang các ngày khác",
+        "Bò Xèo tụt hạng:Lần đầu xuống #3 sau nhiều tháng — theo dõi xem có phải xu hướng khách chuyển sang món khác hay biến động ngắn hạn",
+        "Sáng cuối tuần đảo chiều:Sau 2 tháng tăng (T4→T5→T6: 80.9M→90.9M→101.7M) giờ giảm về 97.9M — theo dõi sát tháng 8 để biết có phải điểm uốn hay không"
+      ]
+    }
+  ],
+  "upsell": [
+    {
+      "seg": "Sáng trong tuần",
+      "clr": "#1A4080",
+      "bg": "#EAF0FF",
+      "icon": "☕",
+      "tips": [
+        "<strong>Định vị lại SET LUNCH 2:</strong> Đã vượt SET LUNCH 3 — làm \"combo signature\" trên menu/QR, thêm 1 lựa chọn tùy chỉnh nhỏ (đổi món tráng miệng) để tăng giá trị cảm nhận",
+        "<strong>Bundle nước theo combo:</strong> Alba Still/nước ngọt cố định trong SET LUNCH 2 thay vì tính riêng — tăng AOV tự nhiên mà không tăng giá niêm yết",
+        "<strong>Nhóm văn phòng 4+ người:</strong> Gợi ý \"Combo nhóm SET LUNCH\" giảm nhẹ khi đặt từ 4 suất — tăng traffic nhóm lớn giờ trưa"
+      ]
+    },
+    {
+      "seg": "Sáng cuối tuần",
+      "clr": "#1A6B5A",
+      "bg": "#E0F5EF",
+      "icon": "🌿",
+      "tips": [
+        "<strong>Ưu đãi giữ khách brunch:</strong> Vì đang giảm nhẹ — thêm mocktail miễn phí hoặc giảm 10% cho hóa đơn ≥800K vào 2 tuần đầu tháng 8 để kiểm tra phản ứng",
+        "<strong>Đẩy Beef Tagliatelle mới nổi:</strong> Đã vượt lên top 1 sáng CK — làm nổi bật trên menu, có thể tạo phiên bản \"brunch special\" riêng",
+        "<strong>Refresh trải nghiệm:</strong> Đổi plating hoặc thêm 1 món mới theo mùa hè để tạo lý do quay lại cho khách cũ"
+      ]
+    },
+    {
+      "seg": "Tối trong tuần",
+      "clr": "#C8620A",
+      "bg": "#FDF0E0",
+      "icon": "🍽️",
+      "tips": [
+        "<strong>Nhân rộng đà T4-T6 sang T2-T3:</strong> Áp dụng yếu tố đã hiệu quả (có thể là marketing/khuyến mãi cụ thể) cho tối T2/T3 đang đi ngang",
+        "<strong>Chuẩn bị công suất T6 19h:</strong> Giờ cao điểm tuyệt đối — đảm bảo đủ bếp/phục vụ, cân nhắc nhận đặt bàn sớm để dàn traffic đều hơn",
+        "<strong>Gói bàn nhóm lớn chủ động:</strong> Case 13/07 (23 khách, 10.2M) cho thấy tiềm năng — tạo gói \"Private Dinner 15+\" với set menu cố định để chủ động chào bán"
+      ]
+    },
+    {
+      "seg": "Tối cuối tuần",
+      "clr": "#A03040",
+      "bg": "#FAEAEC",
+      "icon": "✨",
+      "tips": [
+        "<strong>Duy trì chất lượng, không cần giảm giá:</strong> TB hóa đơn cao nhất (881K) đã ổn định — tập trung upsell rượu vang/premium cuts thay vì khuyến mãi",
+        "<strong>Wine pairing cho Crab Pasta/Beef Tagliatelle:</strong> 2 món top đều phù hợp rượu trắng nhẹ — gợi ý pairing cụ thể trên menu",
+        "<strong>Tăng cường CN tối:</strong> Đang thấp hơn T7 tối (119.3M vs 133.6M) — thử nghiệm ưu đãi nhỏ riêng cho Chủ Nhật để cân bằng 2 ngày cuối tuần"
+      ]
+    }
+  ],
+  "simulator": [
+    {
+      "label": "+50K TB hóa đơn",
+      "value": "63.9M",
+      "desc": "+5.8% doanh thu"
+    },
+    {
+      "label": "Phục hồi sáng CK về T6",
+      "value": "3.8M",
+      "desc": "97.9M → 101.7M, chênh 3.8M"
+    },
+    {
+      "label": "Nhân rộng đà T4-T6 sang T2-T3",
+      "value": "80M",
+      "desc": "Nếu T2/T3 tối tăng tương tự tỷ lệ"
+    },
+    {
+      "label": "Gói bàn nhóm 15+ (2 lần/tháng)",
+      "value": "20M",
+      "desc": "Dựa trên case 13/07 (10.2M/bàn)"
+    }
+  ]
+}
